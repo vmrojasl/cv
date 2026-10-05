@@ -240,27 +240,18 @@ blockquote[data-split] .wi{transition-duration:1.2s;transition-delay:calc(var(--
 .narrative-chain li+li{position:relative;margin-left:18px}
 .narrative-chain li+li:before{content:"";position:absolute;left:-19px;top:50%;width:18px;height:1px;background:rgba(255,255,255,.6)}
 .js .transformation:not(.is-chained) .narrative-chain li{opacity:0;transform:translateY(8px)}
-.narrative-chain li:first-child{background:#fff;border-color:#fff;color:var(--olivestone)}
-.narrative-chain li{transition:opacity .45s ease,transform .6s var(--ease),background-color .4s ease,color .4s ease;transition-delay:calc(var(--i,0) * 90ms)}
-/* Coupling: research and market lead together, links run both ways, and a loop feeds back */
-.narrative-chain[data-mode=coupled] li:nth-child(2),.narrative-chain[data-mode=helix] li:nth-child(-n+3),.narrative-chain[data-mode=dynamic] li:last-child{background:#fff;border-color:#fff;color:var(--olivestone)}
-.narrative-chain[data-mode=dynamic] li:first-child,.narrative-chain[data-mode=design] li:first-child{background:transparent;border-color:rgba(255,255,255,.6);color:#fff}
-.narrative-chain li{position:relative}
-/* Triple helix: university, company and state are the three interacting strands */
-.narrative-chain[data-mode=helix] li:nth-child(-n+3)+li:before{height:4px;border-block:1px solid rgba(255,255,255,.75);background:transparent;transform:translateY(-50%)}
-.narrative-chain[data-mode=helix] li:nth-child(-n+3):after{position:absolute;left:0;top:calc(100% + 4px);color:#fff;font:800 11px/1 var(--sans);letter-spacing:.06em;text-transform:none;white-space:nowrap}
-.narrative-chain[data-mode=helix] li[data-key=research]:after{content:"University"}
-.narrative-chain[data-mode=helix] li[data-key=market]:after{content:"Company"}
-.narrative-chain[data-mode=helix] li[data-key=finance]:after{content:"State"}
-/* Dynamic, catch-up and design-driven carry a one-line reading under the chain */
-.narrative-chain[data-mode=dynamic]:after,.narrative-chain[data-mode=catchup]:after,.narrative-chain[data-mode=design]:after{left:14px;bottom:2px;color:#fff;font:800 11px/1 var(--sans);letter-spacing:.06em;white-space:nowrap;opacity:1}
-.narrative-chain[data-mode=dynamic]:after{content:"Absorptive capacity · Innovation culture → Execution"}
-.narrative-chain[data-mode=catchup]:after{content:"Imitate → Assimilate → Improve → Innovate"}
-.narrative-chain[data-mode=catchup] li:last-child{border-color:var(--trail-sand);box-shadow:inset 0 0 0 1px var(--trail-sand)}
+.narrative-chain li.is-lead{background:#fff;border-color:#fff;color:var(--olivestone)}
+.narrative-chain li.is-goal{border-color:var(--trail-sand);box-shadow:inset 0 0 0 1px var(--trail-sand)}
+.narrative-chain li{position:relative;transition:opacity .45s ease,transform .6s var(--ease),background-color .4s ease,color .4s ease;transition-delay:calc(var(--i,0) * 90ms)}
+/* A label names the role a step plays in the model: University, Sender, MVP… */
+.narrative-chain li[data-tag]:after{content:attr(data-tag);position:absolute;left:50%;top:calc(100% + 4px);transform:translateX(-50%);color:#fff;font:800 11px/1 var(--sans);letter-spacing:.06em;text-transform:none;white-space:nowrap}
+/* Triple helix: the three actors are braided strands */
+.narrative-chain[data-mode=helix] li.is-lead+li.is-lead:before{height:4px;border-block:1px solid rgba(255,255,255,.75);background:transparent;transform:translateY(-50%)}
+/* A one-line reading of the model under the chain */
+.narrative-chain[data-caption]:after{content:attr(data-caption);left:14px;bottom:2px;color:#fff;font:800 11px/1 var(--sans);letter-spacing:.06em;white-space:nowrap;opacity:1}
 .narrative-chain[data-mode=design]{padding-bottom:24px;border-style:solid;border-color:var(--trail-sand)}
 .narrative-chain[data-mode=design]:after{bottom:6px}
-.narrative-chain[data-mode=design]:after{content:"Meaning first: a new reason to use the product"}
-.narrative-chain[data-mode=coupled] li+li:before{height:4px;border-block:1px solid rgba(255,255,255,.75);background:transparent;transform:translateY(-50%)}
+.narrative-chain[data-mode=coupled] li+li:before,.narrative-chain[data-mode=nordic] li+li:before{height:4px;border-block:1px solid rgba(255,255,255,.75);background:transparent;transform:translateY(-50%)}
 .narrative-chain:before,.narrative-chain:after{content:"";position:absolute;opacity:0;pointer-events:none;transition:opacity .5s ease}
 .narrative-chain[data-mode=coupled]:after{left:26px;right:26px;bottom:6px;height:10px;border:1px solid rgba(255,255,255,.75);border-top:0;opacity:1}
 .narrative-chain[data-mode=coupled]:before{left:22px;bottom:13px;border:4px solid transparent;border-bottom:5px solid #fff;border-top:0;opacity:1}
@@ -275,7 +266,7 @@ blockquote[data-split] .wi{transition-duration:1.2s;transition-delay:calc(var(--
 .mode-step svg{width:18px;height:18px}
 .mode-step:hover{border-color:#fff;background:#fff;color:var(--olivestone)}
 .mode-step:focus-visible{outline-color:#fff}
-.mode-current{position:relative;display:flex;flex:1;align-items:center;justify-content:space-between;gap:12px;min-height:44px;margin:0;padding:0 14px;background:var(--satin-deep-black);color:#fff;font:800 11px/1.2 var(--sans);letter-spacing:.08em;text-transform:uppercase;white-space:nowrap}
+.mode-current{position:relative;display:flex;flex:1;min-width:0;align-items:center;justify-content:space-between;gap:12px;min-height:44px;margin:0;padding:0 14px;background:var(--satin-deep-black);color:#fff;font:800 11px/1.2 var(--sans);letter-spacing:.08em;text-transform:uppercase;white-space:nowrap}
 .mode-count{color:var(--sand-on-navy);font-variant-numeric:tabular-nums}
 .mode-ticks{position:absolute;left:0;right:0;bottom:0;display:flex;gap:3px}
 .mode-ticks i{position:relative;flex:1;height:2px;overflow:hidden;background:rgba(255,255,255,.18)}
@@ -503,13 +494,15 @@ blockquote[data-split] .wi{transition-duration:1.2s;transition-delay:calc(var(--
   .narrative-chain{flex-direction:column;align-items:flex-start;padding:12px 30px 12px 14px}
   .narrative-chain li+li{margin-left:0}
   .narrative-chain li+li:before{left:12px;top:-11px;width:1px;height:10px}
-  .narrative-chain[data-mode=coupled] li+li:before{width:4px;height:10px;border-block:0;border-inline:1px solid rgba(255,255,255,.75);transform:none}
+  .narrative-chain[data-mode=coupled] li+li:before,.narrative-chain[data-mode=nordic] li+li:before{width:4px;height:10px;border-block:0;border-inline:1px solid rgba(255,255,255,.75);transform:none}
   .narrative-chain[data-mode=coupled]:after{left:auto;right:8px;top:24px;bottom:24px;width:10px;height:auto;border:1px solid rgba(255,255,255,.75);border-left:0}
   .narrative-chain[data-mode=coupled]:before{left:auto;right:14px;top:20px;bottom:auto;border:4px solid transparent;border-right:5px solid #fff;border-left:0}
   .narrative-modes{width:100%}
-  .narrative-chain[data-mode=helix] li:nth-child(-n+3):after{left:calc(100% + 8px);top:50%;transform:translateY(-50%)}
-  .narrative-chain[data-mode=dynamic],.narrative-chain[data-mode=catchup],.narrative-chain[data-mode=design]{width:100%;padding-bottom:44px}
-  .narrative-chain[data-mode=dynamic]:after,.narrative-chain[data-mode=catchup]:after,.narrative-chain[data-mode=design]:after{bottom:8px;right:14px;line-height:1.25;white-space:normal}
+  .mode-current{padding-block:8px;line-height:1.25;white-space:normal}
+  .mode-count{flex-shrink:0}
+  .narrative-chain li[data-tag]:after{left:calc(100% + 8px);top:50%;transform:translateY(-50%)}
+  .narrative-chain[data-caption]{width:100%;padding-bottom:44px}
+  .narrative-chain[data-caption]:after{bottom:8px;right:14px;line-height:1.25;white-space:normal}
   .feature-result strong{font-size:clamp(64px,24cqi,110px)}
   .case-backdrop{font-size:80vw;bottom:-.1em}
   .case-grid{grid-template-columns:minmax(0,1fr)}

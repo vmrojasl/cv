@@ -151,55 +151,146 @@
     if (screen.id === 'thesis') playThesis(screen);
   };
 
-  /* ---------- Transfer models: eight ways the five languages connect, reordered with FLIP ---------- */
+  /* ---------- Transfer models: ways the five languages connect, reordered with FLIP ----------
+   * order: step sequence · lead: highlighted steps · goal: outlined end point
+   * tags: label under a step · caption: one line under the chain
+   * The model key doubles as data-mode for the few models with their own drawing
+   * (coupled loop, open boundary, helix strands, design frame, nordic links). */
   const narrativeModels = {
     push: {
       name: 'Technology push',
       order: ['research', 'market', 'ip', 'finance', 'execution'],
+      lead: ['research'],
       note: 'Science leads: research looks for its market.',
       label: 'Technology push: research, market, IP, finance, execution'
     },
     pull: {
       name: 'Market pull',
       order: ['market', 'research', 'ip', 'finance', 'execution'],
+      lead: ['market'],
       note: 'Demand leads: the market sets the research agenda.',
       label: 'Market pull: market, research, IP, finance, execution'
     },
     coupled: {
       name: 'Coupling',
       order: ['research', 'market', 'ip', 'finance', 'execution'],
+      lead: ['research', 'market'],
       note: 'Push and pull at once: lab, product development and market iterate through constant feedback loops.',
       label: 'Coupling model: research and market together, then IP, finance and execution, linked by feedback loops'
     },
     open: {
       name: 'Open innovation',
       order: ['ip', 'research', 'market', 'finance', 'execution'],
+      lead: ['ip'],
       note: 'The boundary opens: unused patents are licensed out; external ideas, patents and startups come in.',
       label: 'Open innovation: IP flows in and out across research, market, finance and execution'
     },
     helix: {
       name: 'Triple helix',
       order: ['finance', 'research', 'market', 'ip', 'execution'],
+      lead: ['finance', 'research', 'market'],
+      tags: { finance: 'State', research: 'University', market: 'Company' },
       note: 'The state funds and regulates; university creates knowledge, company produces: value comes from their interaction.',
       label: 'Triple helix: state finance, university research and company market interact, then IP and execution'
     },
     dynamic: {
       name: 'Dynamic model',
       order: ['research', 'market', 'ip', 'finance', 'execution'],
+      lead: ['execution'],
+      caption: 'Absorptive capacity · Innovation culture → Execution',
       note: 'Success depends on the receiver: its absorptive capacity and innovation culture, not only the technology.',
       label: 'Dynamic model: research to execution, decided by absorptive capacity and innovation culture'
     },
     catchup: {
       name: 'Catch-up',
       order: ['execution', 'market', 'finance', 'ip', 'research'],
+      lead: ['execution'],
+      goal: 'research',
+      caption: 'Imitate → Assimilate → Improve → Innovate',
       note: 'Copy proven production first, then assimilate, improve and innovate: the route of Japan and South Korea.',
       label: 'Catch-up: from execution and market back to IP and own research'
     },
     design: {
       name: 'Design-driven',
       order: ['research', 'market', 'ip', 'finance', 'execution'],
+      lead: [],
+      caption: 'Meaning first: a new reason to use the product',
       note: 'Neither push nor pull: innovation changes what a product means, as the Wii turned gaming into family play.',
       label: 'Design-driven innovation: a new meaning frames research, market, IP, finance and execution'
+    },
+    malik: {
+      name: 'Communication (Malik)',
+      order: ['research', 'ip', 'market', 'finance', 'execution'],
+      lead: ['research', 'ip', 'market'],
+      tags: { research: 'Sender', ip: 'Message', market: 'Receiver' },
+      note: 'University sends, company receives, technology is the message: success means removing the noise between science and business.',
+      label: 'Malik communication model: university sender, technology message, company receiver'
+    },
+    mayer: {
+      name: 'Intermediary (Mayer-Blass)',
+      order: ['research', 'ip', 'finance', 'market', 'execution'],
+      lead: ['ip'],
+      goal: 'finance',
+      caption: 'Lab discovery → TTO translation → Investor case',
+      note: 'Technology cannot leave the lab as it is: a transfer office translates the discovery into an opportunity investors understand.',
+      label: 'Mayer-Blass intermediary model: research, translated by a transfer office through IP, into an investor case'
+    },
+    gorschek: {
+      name: '7 steps (Gorschek)',
+      order: ['market', 'research', 'execution', 'ip', 'finance'],
+      lead: ['market'],
+      goal: 'execution',
+      caption: '7 steps: real problem → lab solution → production pilot',
+      note: 'Brings academic software engineering to industry: seven steps from a real company problem to controlled tests in production.',
+      label: 'Gorschek seven-step model: company problem, research solution, controlled production pilot'
+    },
+    bozeman: {
+      name: 'Contingent (Bozeman)',
+      order: ['research', 'ip', 'execution', 'finance', 'market'],
+      lead: [],
+      tags: { research: 'Agent', ip: 'Object', execution: 'Recipient', finance: 'Channel', market: 'Impact' },
+      note: 'No single metric such as royalties: effectiveness depends on agent, object, recipient, channel and impact on society.',
+      label: 'Bozeman contingent effectiveness: agent, object, recipient, channel and social impact'
+    },
+    lean: {
+      name: 'Lean startup',
+      order: ['research', 'execution', 'market', 'ip', 'finance'],
+      lead: ['execution', 'market'],
+      tags: { execution: 'MVP', market: 'Interviews' },
+      note: 'As in NSF I-Corps: scientists build an MVP and interview hundreds of customers before patenting or producing at scale.',
+      label: 'Lean startup: research, MVP and customer interviews before IP and finance'
+    },
+    tas: {
+      name: 'Application selection',
+      order: ['research', 'market', 'finance', 'ip', 'execution'],
+      lead: ['research', 'market', 'finance'],
+      tags: { research: 'Characterize', market: 'Identify', finance: 'Select' },
+      note: 'A breakthrough looking for its market: characterize what makes it unique, identify industries it could serve, select the lowest barrier.',
+      label: 'Technology application selection: characterize, identify and select the market'
+    },
+    anglo: {
+      name: 'Anglo-Saxon',
+      order: ['ip', 'execution', 'finance', 'market', 'research'],
+      lead: ['ip'],
+      caption: 'IP → Spin-off → Venture capital',
+      note: 'Regional model (Rubiralta): intellectual property first, fast spin-off creation and venture capital funding.',
+      label: 'Anglo-Saxon model: IP, spin-off and venture capital'
+    },
+    central: {
+      name: 'Central European',
+      order: ['research', 'finance', 'market', 'ip', 'execution'],
+      lead: ['research', 'finance'],
+      caption: 'Applied institutes · State + private contracts',
+      note: 'Regional model: applied research institutes, like Fraunhofer in Germany, funded jointly by the state and private contracts.',
+      label: 'Central European model: applied research institutes with public and private funding'
+    },
+    nordic: {
+      name: 'Nordic',
+      order: ['finance', 'research', 'execution', 'market', 'ip'],
+      lead: ['finance'],
+      caption: 'Public funds → Sustainability · Digitalization',
+      note: 'Regional model: strong social cohesion and public funds aimed at sustainability and digitalization.',
+      label: 'Nordic model: public funds for sustainability and digitalization'
     }
   };
   const narrativeCycle = Object.keys(narrativeModels);
@@ -230,6 +321,16 @@
     });
     narrativeChain.setAttribute('aria-label', narrativeModels[mode].label);
     narrativeChain.dataset.mode = mode;
+    const model = narrativeModels[mode];
+    if (model.caption) narrativeChain.dataset.caption = model.caption;
+    else delete narrativeChain.dataset.caption;
+    items.forEach((item) => {
+      const key = item.dataset.key;
+      item.classList.toggle('is-lead', model.lead.includes(key));
+      item.classList.toggle('is-goal', model.goal === key);
+      if (model.tags?.[key]) item.dataset.tag = model.tags[key];
+      else delete item.dataset.tag;
+    });
     if (narrativeNote) narrativeNote.textContent = narrativeModels[mode].note;
     syncModeControl(mode);
     if (reducedMotion) return;
