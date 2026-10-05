@@ -180,7 +180,12 @@
       "label": "Resultados destacados",
       "li": "<b>USD 14,3M</b> valoración de spin-off",
       "li_2": "<b>20+</b> acuerdos de transferencia y capital",
-      "li_3": "<b>USD 10M</b> transferencia industrial"
+      "li_3": "<b>USD 10M</b> transferencia industrial",
+      "links": {
+        "label": "Enlaces del perfil",
+        "tools": "Herramientas gratuitas",
+        "blog": "Blog"
+      }
     },
     "thesis": {
       "title": "Tesis ejecutiva",

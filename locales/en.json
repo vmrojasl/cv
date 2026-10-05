@@ -227,7 +227,12 @@
       "label": "Selected results",
       "li": "<b>USD 14.3M</b> spin-off valuation",
       "li_2": "<b>20+</b> transfer and capital deals",
-      "li_3": "<b>USD 10M</b> industrial transfer"
+      "li_3": "<b>USD 10M</b> industrial transfer",
+      "links": {
+        "label": "Profile links",
+        "tools": "Free tools",
+        "blog": "Blog"
+      }
     },
     "thesis": {
       "title": "Executive thesis",

@@ -432,11 +432,13 @@ const bootProfile = () => {
     root.dataset.tone = screen.dataset.tone || 'light';
     root.dataset.screen = screen.id;
     if (isReady) revealScreen(screen);
-    navigatorButtons.forEach((button, buttonIndex) => button.toggleAttribute('aria-current', buttonIndex === index));
+    // aria-current needs a value; an empty attribute reads as "false".
+    const markCurrent = (element, on) => (on ? element.setAttribute('aria-current', 'true') : element.removeAttribute('aria-current'));
+    navigatorButtons.forEach((button, buttonIndex) => markCurrent(button, buttonIndex === index));
     navLinks.forEach((link) => {
       const target = document.querySelector(link.getAttribute('href'));
       const active = target === screen || (target && target.id.split('-')[0] === screen.id.split('-')[0]);
-      link.toggleAttribute('aria-current', active);
+      markCurrent(link, active);
     });
     nextButton?.classList.toggle('is-last', index === screens.length - 1);
     document.title = t('ui.docTitle', { title: screen.dataset.title });
