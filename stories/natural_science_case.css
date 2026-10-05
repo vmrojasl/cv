@@ -53,6 +53,14 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--olivestone);outline
 .story-brand-copy{display:grid;line-height:1.05}
 .story-brand-copy strong{font-size:15px}
 .story-brand-copy small{margin-top:4px;color:var(--ballad-blue);font-size:11px;letter-spacing:.12em;text-transform:uppercase}
+/* ---------- Language switch ---------- */
+.lang-switch{position:relative;z-index:3;display:flex;flex:none;border:1px solid rgba(255,255,255,.36)}
+.lang-switch button{min-width:42px;min-height:42px;padding:0 10px;border:0;background:transparent;color:#fff;font:800 12px/1 var(--sans,Aptos,"Segoe UI",Arial,sans-serif);letter-spacing:.12em;cursor:pointer;transition:background-color .25s ease,color .25s ease}
+.lang-switch button+button{border-left:1px solid rgba(255,255,255,.36)}
+.lang-switch button[aria-pressed=true]{background:#fff;color:var(--pantone-302c)}
+.lang-switch button:not([aria-pressed=true]):hover{background:rgba(255,255,255,.12)}
+.lang-switch button:focus-visible{outline:2px solid var(--trail-sand);outline-offset:2px}
+.story-bar .lang-switch{margin-left:auto}
 .story-back{display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:0 14px;border:1px solid rgba(255,255,255,.36);font:800 12px/1 var(--sans);text-decoration:none;transition:border-color .2s ease,background-color .2s ease,color .2s ease}
 .story-back:hover{background:var(--trail-sand);border-color:var(--trail-sand);color:var(--satin-deep-black)}
 .story-progress{position:absolute;left:0;right:0;bottom:-1px;height:2px}

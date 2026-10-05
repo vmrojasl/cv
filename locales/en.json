@@ -1,0 +1,487 @@
+{
+  "meta": {
+    "lang": "en",
+    "locale": "en-US",
+    "name": "English"
+  },
+  "ui": {
+    "menu": "Menu",
+    "close": "Close",
+    "goTo": "Go to {title}",
+    "section": "Section {n}",
+    "selectedCase": "Selected case",
+    "docTitle": "{title} | Victor Rojas",
+    "language": "Language"
+  },
+  "models": {
+    "push": {
+      "name": "Technology push",
+      "note": "Science leads: research looks for its market.",
+      "label": "Technology push: research, market, IP, finance, execution"
+    },
+    "pull": {
+      "name": "Market pull",
+      "note": "Demand leads: the market sets the research agenda.",
+      "label": "Market pull: market, research, IP, finance, execution"
+    },
+    "coupled": {
+      "name": "Coupling",
+      "note": "Push and pull at once: lab, product development and market iterate through constant feedback loops.",
+      "label": "Coupling model: research and market together, then IP, finance and execution, linked by feedback loops"
+    },
+    "open": {
+      "name": "Open innovation",
+      "note": "The boundary opens: unused patents are licensed out; external ideas, patents and startups come in.",
+      "label": "Open innovation: IP flows in and out across research, market, finance and execution"
+    },
+    "helix": {
+      "name": "Triple helix",
+      "note": "The state funds and regulates; university creates knowledge, company produces: value comes from their interaction.",
+      "label": "Triple helix: state finance, university research and company market interact, then IP and execution",
+      "tags": {
+        "finance": "State",
+        "research": "University",
+        "market": "Company"
+      }
+    },
+    "dynamic": {
+      "name": "Dynamic model",
+      "note": "Success depends on the receiver: its absorptive capacity and innovation culture, not only the technology.",
+      "label": "Dynamic model: research to execution, decided by absorptive capacity and innovation culture",
+      "caption": "Absorptive capacity · Innovation culture → Execution"
+    },
+    "catchup": {
+      "name": "Catch-up",
+      "note": "Copy proven production first, then assimilate, improve and innovate: the route of Japan and South Korea.",
+      "label": "Catch-up: from execution and market back to IP and own research",
+      "caption": "Imitate → Assimilate → Improve → Innovate"
+    },
+    "design": {
+      "name": "Design-driven",
+      "note": "Neither push nor pull: innovation changes what a product means, as the Wii turned gaming into family play.",
+      "label": "Design-driven innovation: a new meaning frames research, market, IP, finance and execution",
+      "caption": "Meaning first: a new reason to use the product"
+    },
+    "malik": {
+      "name": "Communication (Malik)",
+      "note": "University sends, company receives, technology is the message: success means removing the noise between science and business.",
+      "label": "Malik communication model: university sender, technology message, company receiver",
+      "tags": {
+        "research": "Sender",
+        "ip": "Message",
+        "market": "Receiver"
+      }
+    },
+    "mayer": {
+      "name": "Intermediary (Mayer-Blass)",
+      "note": "Technology cannot leave the lab as it is: a transfer office translates the discovery into an opportunity investors understand.",
+      "label": "Mayer-Blass intermediary model: research, translated by a transfer office through IP, into an investor case",
+      "caption": "Lab discovery → TTO translation → Investor case"
+    },
+    "gorschek": {
+      "name": "7 steps (Gorschek)",
+      "note": "Brings academic software engineering to industry: seven steps from a real company problem to controlled tests in production.",
+      "label": "Gorschek seven-step model: company problem, research solution, controlled production pilot",
+      "caption": "7 steps: real problem → lab solution → production pilot"
+    },
+    "bozeman": {
+      "name": "Contingent (Bozeman)",
+      "note": "No single metric such as royalties: effectiveness depends on agent, object, recipient, channel and impact on society.",
+      "label": "Bozeman contingent effectiveness: agent, object, recipient, channel and social impact",
+      "tags": {
+        "research": "Agent",
+        "ip": "Object",
+        "execution": "Recipient",
+        "finance": "Channel",
+        "market": "Impact"
+      }
+    },
+    "lean": {
+      "name": "Lean startup",
+      "note": "As in NSF I-Corps: scientists build an MVP and interview hundreds of customers before patenting or producing at scale.",
+      "label": "Lean startup: research, MVP and customer interviews before IP and finance",
+      "tags": {
+        "execution": "MVP",
+        "market": "Interviews"
+      }
+    },
+    "tas": {
+      "name": "Application selection",
+      "note": "A breakthrough looking for its market: characterize what makes it unique, identify industries it could serve, select the lowest barrier.",
+      "label": "Technology application selection: characterize, identify and select the market",
+      "tags": {
+        "research": "Characterize",
+        "market": "Identify",
+        "finance": "Select"
+      }
+    },
+    "anglo": {
+      "name": "Anglo-Saxon",
+      "note": "Regional model (Rubiralta): intellectual property first, fast spin-off creation and venture capital funding.",
+      "label": "Anglo-Saxon model: IP, spin-off and venture capital",
+      "caption": "IP → Spin-off → Venture capital"
+    },
+    "central": {
+      "name": "Central European",
+      "note": "Regional model: applied research institutes, like Fraunhofer in Germany, funded jointly by the state and private contracts.",
+      "label": "Central European model: applied research institutes with public and private funding",
+      "caption": "Applied institutes · State + private contracts"
+    },
+    "nordic": {
+      "name": "Nordic",
+      "note": "Regional model: strong social cohesion and public funds aimed at sustainability and digitalization.",
+      "label": "Nordic model: public funds for sustainability and digitalization",
+      "caption": "Public funds → Sustainability · Digitalization"
+    }
+  },
+  "cosmos": {
+    "distance": "{km} km from Bogotá",
+    "places": {
+      "Bogotá Región": "Bogotá Region",
+      "Eje Cafetero": "Coffee Region",
+      "Ciudad de México": "Mexico City",
+      "México": "Mexico",
+      "Brasil": "Brazil",
+      "Perú": "Peru",
+      "EE. UU.": "USA",
+      "Los Ángeles": "Los Angeles",
+      "Nueva York": "New York",
+      "Canadá": "Canada",
+      "Londres": "London",
+      "Reino Unido": "United Kingdom",
+      "París": "Paris",
+      "Francia": "France",
+      "Berlín": "Berlin",
+      "Alemania": "Germany",
+      "Múnich": "Munich",
+      "Ámsterdam": "Amsterdam",
+      "Países Bajos": "Netherlands",
+      "Estocolmo": "Stockholm",
+      "Suecia": "Sweden",
+      "Finlandia": "Finland",
+      "Zúrich": "Zurich",
+      "Suiza": "Switzerland",
+      "España": "Spain",
+      "Lisboa": "Lisbon",
+      "Dubái": "Dubai",
+      "EAU": "UAE",
+      "Riad": "Riyadh",
+      "Arabia Saudita": "Saudi Arabia",
+      "El Cairo": "Cairo",
+      "Egipto": "Egypt",
+      "Kenia": "Kenya",
+      "Ciudad del Cabo": "Cape Town",
+      "Sudáfrica": "South Africa",
+      "Singapur": "Singapore",
+      "Yakarta": "Jakarta",
+      "Shanghái": "Shanghai",
+      "Pekín": "Beijing",
+      "Taipéi": "Taipei",
+      "Taiwán": "Taiwan",
+      "Seúl": "Seoul",
+      "Corea del Sur": "South Korea",
+      "Tokio": "Tokyo",
+      "Japón": "Japan",
+      "Sídney": "Sydney"
+    }
+  },
+  "index": {
+    "meta": {
+      "content": "Executive profile of Victor Manuel Rojas Leal: science ventures, technology transfer, capital readiness and innovation leadership.",
+      "title": "Victor Manuel Rojas Leal | Global Innovation Executive"
+    },
+    "page": {
+      "skip-link": "Skip to content",
+      "label": "Go to next section",
+      "span": "Next"
+    },
+    "header": {
+      "label": "Home",
+      "strong": "Victor Rojas",
+      "small": "Global Science Innovation Executive"
+    },
+    "primary-nav": {
+      "label": "Main navigation",
+      "nav-heading": "Explore profile",
+      "a": "Profile",
+      "a_2": "Thesis",
+      "a_3": "Impact",
+      "a_4": "Cases",
+      "a_5": "Method",
+      "nav-tools": "Tools",
+      "nav-cta": "Let’s connect"
+    },
+    "section-navigator": {
+      "label": "Profile sections"
+    },
+    "hero": {
+      "title": "Executive profile",
+      "folio": "Board / Executive Profile · Global Innovation Leadership",
+      "h1": "I turn science into <em>investable ventures</em>",
+      "hero-lead": "I help universities, companies and innovation ecosystems convert research and intellectual property into investable assets, bankable business cases and scalable platforms.",
+      "span": "Explore impact cases",
+      "text-action": "Contact Victor",
+      "alt": "Victor Manuel Rojas Leal",
+      "h2": "Science venture acceleration leader",
+      "p": "Director of Research and Transfer @ UCompensar. Venture builder, IP and technology broker, and investor.",
+      "label": "Selected results",
+      "li": "<b>USD 14.3M</b> spin-off valuation",
+      "li_2": "<b>20+</b> transfer and capital deals",
+      "li_3": "<b>USD 10M</b> industrial transfer"
+    },
+    "thesis": {
+      "title": "Executive thesis",
+      "folio": "02 · Executive thesis",
+      "p": "Science ventures fail when <span class=\"term\">research</span>, <span class=\"term\">market</span>, <span class=\"term\">IP</span>, <span class=\"term\">finance</span> and <span class=\"term\">execution</span> move as disconnected languages.",
+      "h2": "My work is to translate them into one <em>investment-grade operating narrative.</em>",
+      "span": "Before",
+      "h3": "Promising science, unclear market path",
+      "p_2": "Research outputs, patents and prototypes with limited commercial structure, valuation or investor narrative.",
+      "span_2": "After",
+      "h3_2": "Investable venture logic",
+      "label": "Transfer model",
+      "label_2": "Previous model",
+      "label_3": "Next model",
+      "li": "Research",
+      "li_2": "Market",
+      "li_3": "IP",
+      "li_4": "Finance",
+      "li_5": "Execution",
+      "p_3": "Business case, IP strategy, route-to-market, valuation logic, stakeholder alignment and deal-readiness."
+    },
+    "impact-a": {
+      "title": "Portfolio impact",
+      "folio": "03 · Impact",
+      "h2": "Scale is not a promise.<br><em>It is evidence.</em>",
+      "p": "A portfolio built across innovation, technology transfer and venture initiatives.",
+      "span": "View portfolio",
+      "strong": "USD 58M+",
+      "span_2": "portfolio of projects managed",
+      "b": "Portfolio leadership",
+      "p_2": "Cross-functional programs connecting science, market, institutions and capital.",
+      "b_2": "Commercial traction",
+      "p_3": "<strong data-count>COP 1,500M+</strong> in innovation and technology transfer sales, 2023–2024."
+    },
+    "cases-a": {
+      "title": "Featured case",
+      "folio": "04 · Featured case",
+      "a": "Corporate spin-off prepared for capital logic",
+      "p": "Supported negotiation and structuring of a science-based corporate spin-off with a credible investor-facing value story.",
+      "case-tag": "Venture structuring",
+      "case-link": "Read Ki Natural Science case",
+      "small": "Post-money valuation",
+      "strong": "USD<br>14.3M"
+    },
+    "cases-b": {
+      "title": "Portfolio cases",
+      "folio": "05 · Portfolio cases",
+      "h2": "From technology assets to funded platforms.",
+      "span": "Technology portfolio",
+      "h3": "Sácale Jugo a Tu Patente",
+      "p": "Managed 2020-2023 editions with Minciencias and SIC, supporting a portfolio of 17 technologies.",
+      "strong": "20 agreements, contracts and capital operations supported.",
+      "case-label": "Technology portfolio",
+      "case-title": "Sácale Jugo a Tu Patente",
+      "case-result": "20 agreements, contracts and capital operations supported.",
+      "case-body": "A portfolio leadership case connecting intellectual property, commercialization pathways, negotiation support and capital operations across 17 technologies.",
+      "case-open": "Explore case",
+      "span_2": "Funding platform",
+      "h3_2": "Science entrepreneurship program",
+      "p_2": "Led the war room for a multi-stakeholder Minciencias proposal involving universities, startups, schools and researchers.",
+      "strong_2": "97/100 score · COP 2.440M project.",
+      "case-label_2": "Funding platform",
+      "case-title_2": "Science entrepreneurship program",
+      "case-result_2": "97/100 score · COP 2.440M project.",
+      "case-body_2": "A coordinated proposal process aligning universities, startups, schools and researchers around a fundable science entrepreneurship platform.",
+      "case-open_2": "Explore case",
+      "span_3": "Industrial transfer",
+      "h3_3": "INDUMIL technology transfer",
+      "p_3": "Formulated, negotiated and secured a manufacturing improvement and technology transfer contract with an Israeli company.",
+      "strong_3": "USD 10M gross income · USD 3M intangibles.",
+      "case-label_3": "Industrial transfer",
+      "case-title_3": "INDUMIL technology transfer",
+      "case-result_3": "USD 10M gross income · USD 3M intangibles.",
+      "case-body_3": "A cross-border technology transfer and manufacturing improvement engagement structured around technical value, negotiation and industrial execution.",
+      "case-open_3": "Explore case",
+      "span_4": "Deal-flow bridge",
+      "h3_4": "University to company builder",
+      "p_4": "Connected a university technology opportunity with a company builder to activate venture financing and execution capacity.",
+      "strong_4": "USD 250K capital raised.",
+      "case-label_4": "Deal-flow bridge",
+      "case-title_4": "University to company builder",
+      "case-result_4": "USD 250K capital raised.",
+      "case-body_4": "A deal-flow bridge that made a university technology legible to a company builder and activated the capital and execution capabilities needed to advance it.",
+      "case-open_4": "Explore case"
+    },
+    "method": {
+      "title": "Method",
+      "folio": "06 · Method",
+      "h2": "A repeatable system from signal to structured value.",
+      "p": "Five phases, each led by one capability. Executive communication runs through all of them: board-level narratives, investment memos and stakeholder alignment.",
+      "small": "Sense",
+      "strong": "Opportunity and strategic fit",
+      "h3": "Science-to-market translation",
+      "p_2": "Turns R&D, IP and technical claims into customer problems and adoption logic.",
+      "small_2": "Shape",
+      "strong_2": "Business case and value proposition",
+      "h3_2": "Technology valuation and negotiation",
+      "p_3": "Builds valuation ranges, deal assumptions and negotiation anchors for technology assets.",
+      "small_3": "Structure",
+      "strong_3": "IP, governance and economics",
+      "h3_3": "Venture structuring",
+      "p_4": "Shapes spin-offs, business models, governance and capital readiness.",
+      "small_4": "Mobilize",
+      "strong_4": "Partners, capital and execution",
+      "h3_4": "Ecosystem orchestration",
+      "p_5": "Aligns universities, corporations, startups, investors and public institutions.",
+      "small_5": "Scale",
+      "strong_5": "Adoption, portfolio and growth",
+      "h3_5": "Portfolio and program leadership",
+      "p_6": "Designs operating cadences, metrics and decision gates for innovation business lines."
+    },
+    "voices": {
+      "title": "Third-party voice",
+      "folio": "07 · Third-party voice",
+      "blockquote": "“Tuve la fortuna de trabajar hombro a hombro con él y su equipo para llevar nuestra empresa y nuestra propiedad intelectual al siguiente nivel.”",
+      "quote-translation": "“I was fortunate to work shoulder to shoulder with him and his team to take our company and our intellectual property to the next level.” <small>Translated from Spanish</small>",
+      "strong": "Cristian Camilo Díaz Merchán",
+      "span": "General Manager, KI Natural Science",
+      "span_2": "External validation",
+      "h3": "Connect Bogotá",
+      "p": "Lists the case among its research-results transfer services: through Sácale Jugo a Tu Patente (Minciencias and SIC), Ki Cannabic Science reached an agreement with RIPPLE to create the spin-off TORCH.",
+      "a": "View source"
+    },
+    "contact": {
+      "title": "Contact",
+      "folio": "08 · Let’s build value",
+      "h2": "Looking for a leader who can connect science, capital and execution?",
+      "p": "Let’s discuss global innovation leadership, venture building, technology transfer and portfolio growth.",
+      "a": "LinkedIn",
+      "contact-signature": "“Complexity becomes valuable only when it can be translated into a decision, a deal and a path to scale.”",
+      "span": "Victor Manuel Rojas Leal",
+      "span_2": "Science ventures · Deal flow · Capital · Growth"
+    },
+    "case-dialog": {
+      "label": "Close case",
+      "case-dialog-index": "VR / CASE"
+    }
+  },
+  "portfolio": {
+    "meta": {
+      "title": "Portfolio under construction | Victor Rojas"
+    },
+    "header": {
+      "label": "Victor Rojas, back to profile",
+      "strong": "Victor Rojas"
+    },
+    "page": {
+      "status": "<i aria-hidden=\"true\"></i>Portfolio",
+      "rise": "Under <em>construction</em>",
+      "lead": "The full portfolio of projects, cases and results is being prepared. It will be available here soon.",
+      "button": "Back to profile"
+    }
+  },
+  "case": {
+    "meta": {
+      "content": "Ki Natural Science case: turning Colombian biodiversity science into investable venture value.",
+      "title": "Ki Natural Science Case | CV Profile"
+    },
+    "page": {
+      "skip-link": "Skip to content"
+    },
+    "header": {
+      "label": "Victor Rojas, back to profile",
+      "strong": "Victor Rojas",
+      "small": "Impact case",
+      "span": "Back to impact cases"
+    },
+    "hero": {
+      "span": "Real impact case · Ki Natural Science S.A.S.",
+      "span_2": "Science venture structuring · Biodiversity · Sustainable innovation",
+      "h1": "Turning Colombian biodiversity science into <em>investable venture value</em>",
+      "p": "Ki Natural Science presents a science-based innovation platform that converts botanical knowledge, clean technologies and biobased product development into solutions for industry, communities and territories.",
+      "label": "Case actions",
+      "span_3": "Visit Natural Science",
+      "text-link": "Back to impact cases",
+      "label_2": "Case snapshot",
+      "span_4": "Post-money valuation reference",
+      "strong": "USD 14.3M",
+      "card-title": "Corporate spin-off prepared for capital logic",
+      "p_2": "The work focused on translating a broad scientific and technology portfolio into an investor-ready narrative: venture thesis, value story, strategic assets, partner logic and scalable market pathways.",
+      "role-label": "Case snapshot",
+      "footer-back": "Back to impact cases"
+    },
+    "case-proof-strip": {
+      "label": "Ki Natural Science public signals",
+      "strong": "TORCH",
+      "span": "Cold botanical extraction technology designed for cleaner, standardized industrial transfer.",
+      "strong_2": "ESPORA",
+      "span_2": "Controlled cultivation device for functional mushrooms with autonomous environmental management.",
+      "strong_3": "Biobased",
+      "span_3": "Product research spanning botanical beverages, ingredients, aromas and functional experiences.",
+      "strong_4": "Territory",
+      "span_4": "Technology transfer and training with communities, including the Wila ancestral reserve in Cauca."
+    },
+    "video": {
+      "section-mark": "Video",
+      "h2": "Natural Science in context",
+      "p": "A visual reference for understanding the company, its science-based positioning and the kind of venture narrative behind the case."
+    },
+    "challenge": {
+      "section-mark": "Challenge",
+      "h2": "The venture challenge",
+      "p": "The company had more than a product story. It had science, prototypes, intellectual assets, sustainability claims, regulated-market opportunities, community transfer and multiple possible commercialization routes.",
+      "span": "Strategic complexity",
+      "strong": "Many assets, one investment-grade story",
+      "p_2": "Organized technologies, services and products into a coherent platform thesis for capital and partners.",
+      "span_2": "Market access",
+      "strong_2": "From lab language to buyer logic",
+      "p_3": "Reframed technical capabilities around industrial problems, transferability and repeatable value creation.",
+      "span_3": "Capital readiness",
+      "strong_3": "Valuation with strategic narrative",
+      "p_4": "Connected intangible assets, growth options and execution milestones to a credible investor conversation."
+    },
+    "role": {
+      "section-mark": "Role",
+      "h2": "Victor's role in the case",
+      "p": "The contribution was not just advisory language. It was venture structuring: making the business legible to investors, institutions and strategic partners while preserving the scientific and sustainability core.",
+      "span": "Venture thesis",
+      "strong": "Defined the platform logic",
+      "p_2": "Positioned KNS as a science venture platform across extraction, cultivation, biobased products and ERSA advisory.",
+      "span_2": "Asset framing",
+      "strong_2": "Translated science into strategic value",
+      "p_3": "Clarified how prototypes, know-how, transfer potential and sustainability outcomes support valuation.",
+      "span_3": "Deal narrative",
+      "strong_3": "Prepared the capital conversation",
+      "p_4": "Built the investor-facing logic around market pathways, milestones, risk reduction and execution leverage."
+    },
+    "evidence": {
+      "section-mark": "Evidence",
+      "h2": "External validation from Connect Bogota",
+      "p": "Connect Bogota lists the case under its research-results transfer services, connecting the program Sacale Jugo a Tu Patente, Ki Cannabic Science, RIPPLE and the spin-off TORCH.",
+      "span": "Sacale Jugo a Tu Patente",
+      "strong": "De la invencion a la innovacion",
+      "h3": "Sacale Jugo a Tu Patente",
+      "case-tag": "Public evidence",
+      "p_2": "Connect Bogota reports that, through this Minciencias and SIC program, Ki Cannabic Science reached an agreement with the Puerto Rican company RIPPLE to create the spin-off TORCH, valued at US$14.3 million.",
+      "a": "View source at Connect Bogota"
+    },
+    "linkedin": {
+      "section-mark": "LinkedIn",
+      "h2": "Client recommendation from the accompaniment",
+      "p": "Recommendation published by Cristian Camilo Diaz Merchan, General Manager at KI Natural Science, after working with Victor and his team.",
+      "blockquote": "Victor es un profesional y ser humano de cualidades muy poco comunes. Tuve la fortuna de trabajar hombro a hombro con el y su equipo para llevar nuestra empresa y nuestra propiedad intelectual al siguiente nivel. Resalto en el, su profesionalismo, capacidad de cohesion dentro del equipo y liderazgo en el campo profesional y como ser humano, su calidez y buena vibra. Es un privilegio tenerlo como aliado.",
+      "alt": "Cristian Camilo Diaz Merchan",
+      "strong": "Cristian Camilo Diaz Merchan",
+      "p_2": "General Manager at KI Natural Science",
+      "span": "May 8, 2021",
+      "a": "View LinkedIn recommendations"
+    },
+    "outcome": {
+      "h2": "A science company became easier to understand, value and scale.",
+      "span": "Why it matters",
+      "blockquote": "The case demonstrates the profile's core thesis: deep science creates more enterprise value when its technology, market, community, sustainability and capital stories move as one operating narrative.",
+      "cite": "Based on public Ki Natural Science positioning and the portfolio case summary."
+    }
+  }
+}

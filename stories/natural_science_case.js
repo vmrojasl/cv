@@ -1,4 +1,4 @@
-(() => {
+const bootCaseStudy = () => {
   const root = document.documentElement;
   const page = document.getElementById('naturalScienceCasePage');
   if (!page) return;
@@ -143,4 +143,7 @@
   };
 
   (document.fonts?.ready || Promise.resolve()).then(start);
-})();
+};
+
+// Start once the page strings are in place (see i18n.js).
+(window.I18n ? window.I18n.ready : Promise.resolve()).then(bootCaseStudy);

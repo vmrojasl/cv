@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="theme-color" content="#003B5C">
   <meta name="robots" content="noindex">
-  <title>Portfolio under construction | Victor Rojas</title>
+  <title data-i18n="portfolio.meta.title">Portfolio under construction | Victor Rojas</title>
+  <script src="./i18n.js"></script>
   <style>
     :root{--pantone-302c:#003B5C;--satin-deep-black:#1B1E23;--ballad-blue:#BFCDD9;--olivestone:#707326;--trail-sand:#BFA995;--sand-on-navy:#d9c8b8;--serif:"Georgia Pro",Georgia,"Times New Roman",serif;--editorial:"Palatino Linotype","Book Antiqua",Palatino,serif;--sans:Aptos,"Segoe UI",Arial,sans-serif;--ease:cubic-bezier(.16,1,.3,1);--ease-in-out:cubic-bezier(.76,0,.24,1)}
     *{box-sizing:border-box}
@@ -37,6 +38,10 @@
     .button:before{content:"";position:absolute;inset:0;z-index:-1;background:#fff;transform:scaleY(0);transform-origin:bottom;transition:transform .45s var(--ease)}
     .link{display:inline-flex;align-items:center;min-height:44px;font:800 14px/1.2 var(--sans);text-decoration:none;background:linear-gradient(currentColor,currentColor) left 85%/100% 1px no-repeat}
     .icon{width:1em;height:1em;transition:transform .25s var(--ease)}
+    .lang-switch{display:flex;border:1px solid rgba(255,255,255,.4)}
+    .lang-switch button{min-width:44px;min-height:40px;padding:0 10px;border:0;background:transparent;color:#fff;font:800 12px/1 var(--sans);letter-spacing:.12em;cursor:pointer;transition:background-color .25s ease,color .25s ease}
+    .lang-switch button[aria-pressed=true]{background:#fff;color:var(--pantone-302c)}
+    .lang-switch button:focus-visible{outline:2px solid var(--trail-sand);outline-offset:2px}
     .rise{animation:rise 1s var(--ease) both}
     .rise:nth-child(2){animation-delay:.1s}.rise:nth-child(3){animation-delay:.2s}.rise:nth-child(4){animation-delay:.3s}
     @keyframes rise{from{opacity:0;transform:translateY(28px);filter:blur(6px)}}
@@ -50,16 +55,17 @@
     <symbol id="i-arrow-left" viewBox="0 0 24 24"><path d="M20 12H5M11 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></symbol>
   </svg>
   <header class="bar">
-    <a class="brand" href="./index.html" aria-label="Victor Rojas, back to profile"><span class="brand-mark">VR</span><strong>Victor Rojas</strong></a>
+    <a class="brand" href="./index.html" aria-label="Victor Rojas, back to profile" data-i18n-attr="aria-label:portfolio.header.label"><span class="brand-mark">VR</span><strong data-i18n="portfolio.header.strong">Victor Rojas</strong></a>
+    <div class="lang-switch" data-lang-switch role="group" aria-label="Language" data-i18n-attr="aria-label:ui.language"><button type="button" data-lang="es" lang="es" aria-label="Español">ES</button><button type="button" data-lang="en" lang="en" aria-label="English">EN</button></div>
   </header>
   <main class="stage">
     <div class="orbit" aria-hidden="true"></div>
     <div class="copy">
-      <p class="status rise"><i aria-hidden="true"></i>Portfolio</p>
-      <h1 class="rise">Under <em>construction</em></h1>
-      <p class="lead rise">The full portfolio of projects, cases and results is being prepared. It will be available here soon.</p>
+      <p class="status rise" data-i18n-html="portfolio.page.status"><i aria-hidden="true"></i>Portfolio</p>
+      <h1 class="rise" data-i18n-html="portfolio.page.rise">Under <em>construction</em></h1>
+      <p class="lead rise" data-i18n="portfolio.page.lead">The full portfolio of projects, cases and results is being prepared. It will be available here soon.</p>
       <div class="actions rise">
-        <a class="button" href="./index.html#impact-a"><svg class="icon" aria-hidden="true"><use href="#i-arrow-left"/></svg>Back to profile</a>
+        <a class="button" href="./index.html#impact-a" data-i18n="portfolio.page.button"><svg class="icon" aria-hidden="true"><use href="#i-arrow-left"/></svg>Back to profile</a>
         <a class="link" href="mailto:vmrlbiz@gmail.com">vmrlbiz@gmail.com</a>
       </div>
     </div>

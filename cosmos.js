@@ -32,7 +32,13 @@
     const a = Math.sin(dLat / 2) ** 2 + Math.cos(BOGOTA.lat * rad) * Math.cos(lat * rad) * Math.sin(dLon / 2) ** 2;
     return 6371 * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
   };
-  const formatKm = (km) => `${Math.round(km).toLocaleString('es-CO')} km de Bogotá`;
+  // Place names are written in Spanish below; locales/<lang>.json → cosmos.places
+  // translates them, and cosmos.distance formats the distance line.
+  const place = (name) => window.I18n?.get('cosmos.places')?.[name] || name;
+  const formatKm = (km) => {
+    const value = Math.round(km).toLocaleString(window.I18n?.locale || 'es-CO');
+    return window.I18n?.t('cosmos.distance', { km: value }) || `${value} km`;
+  };
 
   /* ---------- Local constellations, centred on Bogota ---------- */
   const local = (name, outline, hubs, links) => {
@@ -265,7 +271,7 @@
         octx.font = `700 11px ${SANS}`;
         octx.letterSpacing = '3px';
         octx.textAlign = 'center';
-        octx.fillText(figure.def.name.toUpperCase(), anchor.x, Math.min(height - 60, figure.labelY));
+        octx.fillText(place(figure.def.name).toUpperCase(), anchor.x, Math.min(height - 60, figure.labelY));
         octx.letterSpacing = '0px';
       }
     };
@@ -331,9 +337,9 @@
       // and kept inside the open sky around Bogota.
       const labelAlpha = alpha * ease((arrived - 150) / 500);
       if (labelAlpha > 0) {
-        const meta = `${item.eco.country} · ${formatKm(item.eco.km)}`;
+        const meta = `${place(item.eco.country)} · ${formatKm(item.eco.km)}`;
         octx.font = `700 13px ${SANS}`;
-        const nameWidth = octx.measureText(item.eco.name).width;
+        const nameWidth = octx.measureText(place(item.eco.name)).width;
         octx.font = `11px ${SANS}`;
         const half = Math.max(nameWidth, octx.measureText(meta).width) / 2;
         const minX = Math.max(8, anchor.x - anchor.rx - 24) + half;
@@ -344,7 +350,7 @@
         octx.textAlign = 'center';
         octx.fillStyle = rgba(SAND, labelAlpha);
         octx.font = `700 13px ${SANS}`;
-        octx.fillText(item.eco.name, lx, ly);
+        octx.fillText(place(item.eco.name), lx, ly);
         octx.fillStyle = rgba(BALLAD, 0.9 * labelAlpha);
         octx.font = `11px ${SANS}`;
         octx.fillText(meta, lx, ly + 15);
@@ -462,12 +468,12 @@
         octx.arc(p.x, p.y, 7, 0, TAU);
         octx.stroke();
         octx.font = `700 12px ${SANS}`;
-        const textWidth = octx.measureText(p.label).width;
+        const textWidth = octx.measureText(place(p.label)).width;
         octx.fillStyle = 'rgba(0,38,60,0.85)';
         octx.fillRect(p.x + 12, p.y - 24, textWidth + 14, 22);
         octx.fillStyle = rgba(SAND, 1);
         octx.textAlign = 'left';
-        octx.fillText(p.label, p.x + 19, p.y - 9);
+        octx.fillText(place(p.label), p.x + 19, p.y - 9);
       }
 
       const breathe = Math.sin(time * 0.005);

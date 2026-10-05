@@ -1,5 +1,6 @@
-(() => {
+const bootProfile = () => {
   const root = document.documentElement;
+  const t = (key, vars) => (window.I18n ? window.I18n.t(key, vars) : '');
   const shell = document.querySelector('.story-shell');
   const screens = [...document.querySelectorAll('.screen')];
   const menuButton = document.querySelector('.menu-toggle');
@@ -85,13 +86,14 @@
     const raw = match[0].replace(/[.,]$/, '');
     const thousands = /^\d{1,3}([.,]\d{3})+$/.test(raw);
     const separator = thousands ? raw.match(/[.,]/)[0] : '';
-    const decimals = !thousands && raw.includes('.') ? raw.split('.')[1].length : 0;
-    const value = thousands ? Number(raw.replace(/[.,]/g, '')) : parseFloat(raw);
+    const decimalMark = !thousands && /[.,]/.test(raw) ? raw.match(/[.,]/)[0] : '';
+    const decimals = decimalMark ? raw.split(decimalMark)[1].length : 0;
+    const value = thousands ? Number(raw.replace(/[.,]/g, '')) : parseFloat(raw.replace(',', '.'));
     const prefix = node.data.slice(0, match.index);
     const suffix = node.data.slice(match.index + raw.length);
     const format = (amount) => (thousands
       ? Math.round(amount).toString().replace(/\B(?=(\d{3})+(?!\d))/g, separator)
-      : amount.toFixed(decimals));
+      : amount.toFixed(decimals).replace('.', decimalMark || '.'));
     const textNode = node;
     const duration = 1700;
     const start = performance.now() + 250;
@@ -111,7 +113,7 @@
     nav.classList.remove('open');
     document.body.classList.remove('menu-open');
     menuButton?.setAttribute('aria-expanded', 'false');
-    if (menuLabel) menuLabel.textContent = 'Menu';
+    if (menuLabel) menuLabel.textContent = t('ui.menu');
     if (restoreFocus) lastFocus?.focus();
   };
 
@@ -121,7 +123,7 @@
     nav.classList.add('open');
     document.body.classList.add('menu-open');
     menuButton.setAttribute('aria-expanded', 'true');
-    if (menuLabel) menuLabel.textContent = 'Close';
+    if (menuLabel) menuLabel.textContent = t('ui.close');
     window.setTimeout(() => focusableElements(nav)[0]?.focus(), reducedMotion ? 0 : 420);
   };
 
@@ -152,148 +154,86 @@
   };
 
   /* ---------- Transfer models: ways the five languages connect, reordered with FLIP ----------
-   * order: step sequence · lead: highlighted steps · goal: outlined end point
-   * tags: label under a step · caption: one line under the chain
+   * order: step sequence · lead: highlighted steps · goal: outlined end point.
+   * Names, notes, captions and step labels live in locales/<lang>.json → models.
    * The model key doubles as data-mode for the few models with their own drawing
    * (coupled loop, open boundary, helix strands, design frame, nordic links). */
   const narrativeModels = {
     push: {
-      name: 'Technology push',
       order: ['research', 'market', 'ip', 'finance', 'execution'],
-      lead: ['research'],
-      note: 'Science leads: research looks for its market.',
-      label: 'Technology push: research, market, IP, finance, execution'
+      lead: ['research']
     },
     pull: {
-      name: 'Market pull',
       order: ['market', 'research', 'ip', 'finance', 'execution'],
-      lead: ['market'],
-      note: 'Demand leads: the market sets the research agenda.',
-      label: 'Market pull: market, research, IP, finance, execution'
+      lead: ['market']
     },
     coupled: {
-      name: 'Coupling',
       order: ['research', 'market', 'ip', 'finance', 'execution'],
-      lead: ['research', 'market'],
-      note: 'Push and pull at once: lab, product development and market iterate through constant feedback loops.',
-      label: 'Coupling model: research and market together, then IP, finance and execution, linked by feedback loops'
+      lead: ['research', 'market']
     },
     open: {
-      name: 'Open innovation',
       order: ['ip', 'research', 'market', 'finance', 'execution'],
-      lead: ['ip'],
-      note: 'The boundary opens: unused patents are licensed out; external ideas, patents and startups come in.',
-      label: 'Open innovation: IP flows in and out across research, market, finance and execution'
+      lead: ['ip']
     },
     helix: {
-      name: 'Triple helix',
       order: ['finance', 'research', 'market', 'ip', 'execution'],
-      lead: ['finance', 'research', 'market'],
-      tags: { finance: 'State', research: 'University', market: 'Company' },
-      note: 'The state funds and regulates; university creates knowledge, company produces: value comes from their interaction.',
-      label: 'Triple helix: state finance, university research and company market interact, then IP and execution'
+      lead: ['finance', 'research', 'market']
     },
     dynamic: {
-      name: 'Dynamic model',
       order: ['research', 'market', 'ip', 'finance', 'execution'],
-      lead: ['execution'],
-      caption: 'Absorptive capacity · Innovation culture → Execution',
-      note: 'Success depends on the receiver: its absorptive capacity and innovation culture, not only the technology.',
-      label: 'Dynamic model: research to execution, decided by absorptive capacity and innovation culture'
+      lead: ['execution']
     },
     catchup: {
-      name: 'Catch-up',
       order: ['execution', 'market', 'finance', 'ip', 'research'],
       lead: ['execution'],
-      goal: 'research',
-      caption: 'Imitate → Assimilate → Improve → Innovate',
-      note: 'Copy proven production first, then assimilate, improve and innovate: the route of Japan and South Korea.',
-      label: 'Catch-up: from execution and market back to IP and own research'
+      goal: 'research'
     },
     design: {
-      name: 'Design-driven',
       order: ['research', 'market', 'ip', 'finance', 'execution'],
-      lead: [],
-      caption: 'Meaning first: a new reason to use the product',
-      note: 'Neither push nor pull: innovation changes what a product means, as the Wii turned gaming into family play.',
-      label: 'Design-driven innovation: a new meaning frames research, market, IP, finance and execution'
+      lead: []
     },
     malik: {
-      name: 'Communication (Malik)',
       order: ['research', 'ip', 'market', 'finance', 'execution'],
-      lead: ['research', 'ip', 'market'],
-      tags: { research: 'Sender', ip: 'Message', market: 'Receiver' },
-      note: 'University sends, company receives, technology is the message: success means removing the noise between science and business.',
-      label: 'Malik communication model: university sender, technology message, company receiver'
+      lead: ['research', 'ip', 'market']
     },
     mayer: {
-      name: 'Intermediary (Mayer-Blass)',
       order: ['research', 'ip', 'finance', 'market', 'execution'],
       lead: ['ip'],
-      goal: 'finance',
-      caption: 'Lab discovery → TTO translation → Investor case',
-      note: 'Technology cannot leave the lab as it is: a transfer office translates the discovery into an opportunity investors understand.',
-      label: 'Mayer-Blass intermediary model: research, translated by a transfer office through IP, into an investor case'
+      goal: 'finance'
     },
     gorschek: {
-      name: '7 steps (Gorschek)',
       order: ['market', 'research', 'execution', 'ip', 'finance'],
       lead: ['market'],
-      goal: 'execution',
-      caption: '7 steps: real problem → lab solution → production pilot',
-      note: 'Brings academic software engineering to industry: seven steps from a real company problem to controlled tests in production.',
-      label: 'Gorschek seven-step model: company problem, research solution, controlled production pilot'
+      goal: 'execution'
     },
     bozeman: {
-      name: 'Contingent (Bozeman)',
       order: ['research', 'ip', 'execution', 'finance', 'market'],
-      lead: [],
-      tags: { research: 'Agent', ip: 'Object', execution: 'Recipient', finance: 'Channel', market: 'Impact' },
-      note: 'No single metric such as royalties: effectiveness depends on agent, object, recipient, channel and impact on society.',
-      label: 'Bozeman contingent effectiveness: agent, object, recipient, channel and social impact'
+      lead: []
     },
     lean: {
-      name: 'Lean startup',
       order: ['research', 'execution', 'market', 'ip', 'finance'],
-      lead: ['execution', 'market'],
-      tags: { execution: 'MVP', market: 'Interviews' },
-      note: 'As in NSF I-Corps: scientists build an MVP and interview hundreds of customers before patenting or producing at scale.',
-      label: 'Lean startup: research, MVP and customer interviews before IP and finance'
+      lead: ['execution', 'market']
     },
     tas: {
-      name: 'Application selection',
       order: ['research', 'market', 'finance', 'ip', 'execution'],
-      lead: ['research', 'market', 'finance'],
-      tags: { research: 'Characterize', market: 'Identify', finance: 'Select' },
-      note: 'A breakthrough looking for its market: characterize what makes it unique, identify industries it could serve, select the lowest barrier.',
-      label: 'Technology application selection: characterize, identify and select the market'
+      lead: ['research', 'market', 'finance']
     },
     anglo: {
-      name: 'Anglo-Saxon',
       order: ['ip', 'execution', 'finance', 'market', 'research'],
-      lead: ['ip'],
-      caption: 'IP → Spin-off → Venture capital',
-      note: 'Regional model (Rubiralta): intellectual property first, fast spin-off creation and venture capital funding.',
-      label: 'Anglo-Saxon model: IP, spin-off and venture capital'
+      lead: ['ip']
     },
     central: {
-      name: 'Central European',
       order: ['research', 'finance', 'market', 'ip', 'execution'],
-      lead: ['research', 'finance'],
-      caption: 'Applied institutes · State + private contracts',
-      note: 'Regional model: applied research institutes, like Fraunhofer in Germany, funded jointly by the state and private contracts.',
-      label: 'Central European model: applied research institutes with public and private funding'
+      lead: ['research', 'finance']
     },
     nordic: {
-      name: 'Nordic',
       order: ['finance', 'research', 'execution', 'market', 'ip'],
-      lead: ['finance'],
-      caption: 'Public funds → Sustainability · Digitalization',
-      note: 'Regional model: strong social cohesion and public funds aimed at sustainability and digitalization.',
-      label: 'Nordic model: public funds for sustainability and digitalization'
+      lead: ['finance']
     }
   };
   const narrativeCycle = Object.keys(narrativeModels);
+  const modelText = (mode, field) => t(`models.${mode}.${field}`);
+  const modelTags = (mode) => (window.I18n ? window.I18n.get(`models.${mode}.tags`) : null) || {};
   const narrativeNote = document.querySelector('.narrative-note');
   const modeName = document.querySelector('.mode-name');
   const modeCount = document.querySelector('.mode-count');
@@ -302,14 +242,34 @@
   if (modeTicks) narrativeCycle.forEach(() => modeTicks.appendChild(document.createElement('i')));
   const syncModeControl = (mode) => {
     const index = narrativeCycle.indexOf(mode);
-    if (modeName) modeName.textContent = narrativeModels[mode].name;
+    if (modeName) modeName.textContent = modelText(mode, 'name');
     if (modeCount) modeCount.textContent = `${pad2(index + 1)} / ${pad2(narrativeCycle.length)}`;
     [...(modeTicks?.children || [])].forEach((tick, tickIndex) => tick.classList.toggle('is-active', tickIndex === index));
   };
-  syncModeControl('push');
   const narrativeChain = document.querySelector('.narrative-chain');
   const modeSteps = [...document.querySelectorAll('.mode-step')];
   let narrativeMode = 'push';
+  // Paint a model's highlights, labels and text without moving the steps.
+  const renderModel = (mode) => {
+    if (!narrativeChain) return;
+    const model = narrativeModels[mode];
+    const tags = modelTags(mode);
+    const caption = modelText(mode, 'caption');
+    narrativeChain.setAttribute('aria-label', modelText(mode, 'label'));
+    narrativeChain.dataset.mode = mode;
+    if (caption) narrativeChain.dataset.caption = caption;
+    else delete narrativeChain.dataset.caption;
+    [...narrativeChain.children].forEach((item) => {
+      const key = item.dataset.key;
+      item.classList.toggle('is-lead', model.lead.includes(key));
+      item.classList.toggle('is-goal', model.goal === key);
+      if (tags[key]) item.dataset.tag = tags[key];
+      else delete item.dataset.tag;
+    });
+    if (narrativeNote) narrativeNote.textContent = modelText(mode, 'note');
+    syncModeControl(mode);
+  };
+  renderModel('push');
   const setNarrativeMode = (mode) => {
     if (!narrativeChain || mode === narrativeMode || !narrativeModels[mode]) return;
     narrativeMode = mode;
@@ -319,20 +279,7 @@
       const item = items.find((entry) => entry.dataset.key === key);
       if (item) narrativeChain.appendChild(item);
     });
-    narrativeChain.setAttribute('aria-label', narrativeModels[mode].label);
-    narrativeChain.dataset.mode = mode;
-    const model = narrativeModels[mode];
-    if (model.caption) narrativeChain.dataset.caption = model.caption;
-    else delete narrativeChain.dataset.caption;
-    items.forEach((item) => {
-      const key = item.dataset.key;
-      item.classList.toggle('is-lead', model.lead.includes(key));
-      item.classList.toggle('is-goal', model.goal === key);
-      if (model.tags?.[key]) item.dataset.tag = model.tags[key];
-      else delete item.dataset.tag;
-    });
-    if (narrativeNote) narrativeNote.textContent = narrativeModels[mode].note;
-    syncModeControl(mode);
+    renderModel(mode);
     if (reducedMotion) return;
     items.forEach((item) => {
       const from = before.get(item);
@@ -465,9 +412,9 @@
 
   screens.forEach((screen, index) => {
     const button = document.createElement('button');
-    const title = screen.dataset.title || `Section ${index + 1}`;
+    const title = screen.dataset.title || t('ui.section', { n: index + 1 });
     button.type = 'button';
-    button.setAttribute('aria-label', `Go to ${title}`);
+    button.setAttribute('aria-label', t('ui.goTo', { title }));
     const label = document.createElement('span');
     label.textContent = title;
     button.appendChild(label);
@@ -483,6 +430,7 @@
     current.textContent = String(index + 1).padStart(2, '0');
     if (screenTitle) screenTitle.textContent = screen.dataset.title || '';
     root.dataset.tone = screen.dataset.tone || 'light';
+    root.dataset.screen = screen.id;
     if (isReady) revealScreen(screen);
     navigatorButtons.forEach((button, buttonIndex) => button.toggleAttribute('aria-current', buttonIndex === index));
     navLinks.forEach((link) => {
@@ -491,7 +439,7 @@
       link.toggleAttribute('aria-current', active);
     });
     nextButton?.classList.toggle('is-last', index === screens.length - 1);
-    document.title = `${screen.dataset.title} | Victor Rojas`;
+    document.title = t('ui.docTitle', { title: screen.dataset.title });
   };
 
   if ('IntersectionObserver' in window) {
@@ -660,7 +608,7 @@
   document.querySelectorAll('[data-case-open]').forEach((button) => {
     button.addEventListener('click', () => {
       if (!dialog) return;
-      dialog.querySelector('.case-dialog-label').textContent = button.dataset.caseLabel || 'Selected case';
+      dialog.querySelector('.case-dialog-label').textContent = button.dataset.caseLabel || t('ui.selectedCase');
       dialog.querySelector('#case-dialog-title').textContent = button.dataset.caseTitle || '';
       dialog.querySelector('.case-dialog-body').textContent = button.dataset.caseBody || '';
       dialog.querySelector('.case-dialog-result').textContent = button.dataset.caseResult || '';
@@ -732,9 +680,17 @@
     revealScreen(screens[activeIndex]);
   };
 
-  window.addEventListener('load', () => window.setTimeout(setReady, reducedMotion ? 0 : 450), { once: true });
+  // The strings may arrive after the load event, so check before waiting for it.
+  if (document.readyState === 'complete') window.setTimeout(setReady, reducedMotion ? 0 : 450);
+  else window.addEventListener('load', () => window.setTimeout(setReady, reducedMotion ? 0 : 450), { once: true });
   window.setTimeout(setReady, 2000);
   (document.fonts?.ready || Promise.resolve()).then(initSignal);
-  updateActive(screens[0], 0);
+  // Open at the screen named in the hash (a shared link, or a language switch).
+  const startIndex = Math.max(0, screens.findIndex((screen) => `#${screen.id}` === location.hash));
+  if (startIndex) shell.scrollTo({ top: screens[startIndex].offsetTop, behavior: 'instant' });
+  updateActive(screens[startIndex], startIndex);
   updateScrollEffects();
-})();
+};
+
+// Start once the page strings are in place (see i18n.js).
+(window.I18n ? window.I18n.ready : Promise.resolve()).then(bootProfile);

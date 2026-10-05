@@ -43,3 +43,29 @@ test('story is standalone and returns to the portfolio', () => {
   assert.doesNotMatch(story, /\/static\/shell\/styles\.css/);
   assert.match(story, /\.\.\/index\.html#cases-a/);
 });
+
+test('every page string exists in both languages', () => {
+  const load = (lang) => JSON.parse(fs.readFileSync(path.join(root, 'locales', `${lang}.json`), 'utf8'));
+  const flatten = (node, prefix = '') => Object.entries(node).flatMap(([key, value]) => (
+    value && typeof value === 'object' ? flatten(value, `${prefix}${key}.`) : [`${prefix}${key}`]
+  ));
+  const en = load('en');
+  const es = load('es');
+  const enKeys = flatten(en).filter((key) => !key.startsWith('cosmos.places.'));
+  const esKeys = flatten(es).filter((key) => !key.startsWith('cosmos.places.'));
+  assert.deepEqual([...esKeys].sort(), [...enKeys].sort());
+
+  const has = (dict, key) => typeof key.split('.').reduce((node, part) => node?.[part], dict) === 'string';
+  const pages = ['index.html', 'portfolio.html', 'stories/natural_science_case.html'];
+  pages.forEach((page) => {
+    const source = fs.readFileSync(path.join(root, page), 'utf8');
+    const keys = [
+      ...[...source.matchAll(/data-i18n(?:-html)?="([^"]+)"/g)].map((match) => match[1]),
+      ...[...source.matchAll(/data-i18n-attr="([^"]+)"/g)].flatMap((match) => match[1].split(';').map((pair) => pair.split(':')[1]))
+    ];
+    keys.forEach((key) => {
+      assert.ok(has(en, key), `${page}: ${key} missing in en.json`);
+      assert.ok(has(es, key), `${page}: ${key} missing in es.json`);
+    });
+  });
+});

@@ -100,6 +100,15 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--olivestone);outline
 .primary-nav .nav-cta:hover{background:var(--trail-sand);border-color:var(--trail-sand);color:var(--satin-deep-black)}
 body.menu-open{overflow:hidden}
 
+/* ---------- Language switch ---------- */
+.lang-switch{position:relative;z-index:3;display:flex;flex:none;border:1px solid rgba(255,255,255,.36)}
+.lang-switch button{min-width:42px;min-height:42px;padding:0 10px;border:0;background:transparent;color:#fff;font:800 12px/1 var(--sans);letter-spacing:.12em;cursor:pointer;transition:background-color .25s ease,color .25s ease}
+.lang-switch button+button{border-left:1px solid rgba(255,255,255,.36)}
+.lang-switch button[aria-pressed=true]{background:#fff;color:var(--pantone-302c)}
+.lang-switch button:not([aria-pressed=true]):hover{background:rgba(255,255,255,.12)}
+.lang-switch button:focus-visible{outline:2px solid var(--trail-sand);outline-offset:2px}
+.quote-translation:empty{display:none}
+
 /* ---------- Fixed instruments ---------- */
 .progress-rail{position:fixed;z-index:55;right:0;top:var(--header);bottom:0;width:3px;background:rgba(132,133,136,.18)}
 .progress-rail span{display:block;width:100%;height:0;background:var(--trail-sand);transition:height .35s var(--ease)}
@@ -457,7 +466,9 @@ blockquote[data-split] .wi{transition-duration:1.2s;transition-delay:calc(var(--
   html,body{overflow-x:hidden}
   .brand-copy small,.header-status{display:none}
   .site-header{padding:0 16px}
-  .menu-toggle{margin-left:auto;min-width:88px}
+  .site-header{gap:10px}
+  .lang-switch{margin-left:auto}
+  .menu-toggle{min-width:88px}
   .primary-nav{justify-content:flex-start;padding:calc(var(--header) + 32px) 24px 40px}
   .primary-nav a{font-size:clamp(30px,10vw,44px)}
   .primary-nav .nav-tools{font-size:24px}
@@ -467,6 +478,7 @@ blockquote[data-split] .wi{transition-duration:1.2s;transition-delay:calc(var(--
   .folio{top:calc(var(--header) + 22px);left:20px;right:20px;font-size:11px;letter-spacing:.14em}
   .hero-layout,.hero-copy,.executive-profile{width:100%;max-width:100%;min-width:0}
   .hero-layout{gap:32px;padding-bottom:210px}
+  .hero-screen .screen-inner{padding-top:calc(var(--header) + 88px)}
   .hero-orbit{right:-60vw;top:auto;bottom:6vh;width:120vw}
   .hero-copy h1{font-size:clamp(40px,12vw,58px);line-height:.94;overflow-wrap:normal}
   .hero-lead{max-width:100%;font-size:16px}
