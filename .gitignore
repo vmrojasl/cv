@@ -1,0 +1,5 @@
+# Local agent and tool settings
+.claude/
+.codex/
+.cursor/
+.impeccable/hook.cache.json

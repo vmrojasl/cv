@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#003B5C">
+  <meta name="robots" content="noindex">
+  <title>Portfolio under construction | Victor Rojas</title>
+  <style>
+    :root{--pantone-302c:#003B5C;--satin-deep-black:#1B1E23;--ballad-blue:#BFCDD9;--olivestone:#707326;--trail-sand:#BFA995;--sand-on-navy:#d9c8b8;--serif:"Georgia Pro",Georgia,"Times New Roman",serif;--editorial:"Palatino Linotype","Book Antiqua",Palatino,serif;--sans:Aptos,"Segoe UI",Arial,sans-serif;--ease:cubic-bezier(.16,1,.3,1);--ease-in-out:cubic-bezier(.76,0,.24,1)}
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;overflow-x:hidden;background:var(--pantone-302c);color:#fff;font-family:var(--sans);-webkit-font-smoothing:antialiased}
+    ::selection{background:var(--trail-sand);color:var(--satin-deep-black)}
+    a{color:inherit}
+    a:focus-visible{outline:2px solid var(--trail-sand);outline-offset:4px}
+    .bar{position:fixed;inset:0 0 auto;z-index:5;display:flex;align-items:center;justify-content:space-between;gap:16px;height:72px;padding:0 clamp(18px,3vw,52px);border-bottom:1px solid rgba(255,255,255,.18)}
+    .brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+    .brand-mark{display:grid;place-items:center;width:40px;height:40px;background:var(--ballad-blue);color:var(--pantone-302c);font:800 14px/1 var(--sans)}
+    .brand strong{font-size:16px}
+    .stage{position:relative;display:grid;align-content:center;min-height:100svh;padding:120px clamp(20px,6vw,96px) 72px;overflow:hidden}
+    .orbit{position:absolute;right:-18vw;top:50%;width:min(80vw,1040px);aspect-ratio:1;border:1px solid rgba(191,205,217,.22);border-radius:50%;transform:translateY(-50%);animation:spin 60s linear infinite}
+    .orbit:before,.orbit:after{content:"";position:absolute;border-radius:50%}
+    .orbit:before{inset:14%;border:1px dashed rgba(191,169,149,.35)}
+    .orbit:after{width:14px;height:14px;top:calc(14% - 7px);left:50%;background:var(--trail-sand)}
+    @keyframes spin{to{transform:translateY(-50%) rotate(360deg)}}
+    .copy{position:relative;z-index:1;max-width:760px}
+    .status{display:flex;align-items:center;gap:14px;margin:0 0 28px;color:var(--sand-on-navy);font:800 12px/1.3 var(--sans);letter-spacing:.16em;text-transform:uppercase}
+    .status i{position:relative;width:64px;height:2px;overflow:hidden;background:rgba(255,255,255,.2)}
+    .status i:after{content:"";position:absolute;inset:0;width:40%;background:var(--trail-sand);animation:build 1.8s var(--ease-in-out) infinite}
+    @keyframes build{from{transform:translateX(-100%)}to{transform:translateX(250%)}}
+    h1{margin:0 0 26px;font:500 clamp(52px,9vw,124px)/.9 var(--serif);letter-spacing:-.035em}
+    h1 em{color:var(--trail-sand)}
+    .lead{max-width:52ch;margin:0;color:var(--ballad-blue);font:clamp(17px,1.5vw,21px)/1.55 var(--editorial)}
+    .actions{display:flex;flex-wrap:wrap;align-items:center;gap:14px 28px;margin-top:40px}
+    .button{position:relative;isolation:isolate;display:inline-flex;align-items:center;gap:10px;min-height:52px;padding:0 22px;overflow:hidden;background:var(--trail-sand);color:var(--satin-deep-black);font:800 14px/1.2 var(--sans);text-decoration:none}
+    .button:before{content:"";position:absolute;inset:0;z-index:-1;background:#fff;transform:scaleY(0);transform-origin:bottom;transition:transform .45s var(--ease)}
+    .link{display:inline-flex;align-items:center;min-height:44px;font:800 14px/1.2 var(--sans);text-decoration:none;background:linear-gradient(currentColor,currentColor) left 85%/100% 1px no-repeat}
+    .icon{width:1em;height:1em;transition:transform .25s var(--ease)}
+    .rise{animation:rise 1s var(--ease) both}
+    .rise:nth-child(2){animation-delay:.1s}.rise:nth-child(3){animation-delay:.2s}.rise:nth-child(4){animation-delay:.3s}
+    @keyframes rise{from{opacity:0;transform:translateY(28px);filter:blur(6px)}}
+    @media(hover:hover) and (pointer:fine){.button:hover:before{transform:scaleY(1)}.button:hover .icon{transform:translateX(-3px)}}
+    @media(max-width:760px){.bar{height:64px}.stage{padding:104px 20px 56px}.orbit{right:-60vw;width:130vw}}
+    @media(prefers-reduced-motion:reduce){.orbit,.status i:after,.rise{animation:none}}
+  </style>
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-arrow-left" viewBox="0 0 24 24"><path d="M20 12H5M11 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></symbol>
+  </svg>
+  <header class="bar">
+    <a class="brand" href="./index.html" aria-label="Victor Rojas, back to profile"><span class="brand-mark">VR</span><strong>Victor Rojas</strong></a>
+  </header>
+  <main class="stage">
+    <div class="orbit" aria-hidden="true"></div>
+    <div class="copy">
+      <p class="status rise"><i aria-hidden="true"></i>Portfolio</p>
+      <h1 class="rise">Under <em>construction</em></h1>
+      <p class="lead rise">The full portfolio of projects, cases and results is being prepared. It will be available here soon.</p>
+      <div class="actions rise">
+        <a class="button" href="./index.html#impact-a"><svg class="icon" aria-hidden="true"><use href="#i-arrow-left"/></svg>Back to profile</a>
+        <a class="link" href="mailto:vmrlbiz@gmail.com">vmrlbiz@gmail.com</a>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
