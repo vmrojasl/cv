@@ -4,7 +4,7 @@
  *   data-i18n-html="key"     replaces its inner HTML (for inline emphasis)
  *   data-i18n-attr="aria-label:key;alt:key"   replaces attributes
  * Scripts read strings with I18n.t('key', { name: value }) after I18n.ready.
- * The language comes from ?lang=, then the saved choice, then the browser.
+ * The language comes from ?lang=, then the visitor's saved choice; English otherwise.
  * Load this file in <head> without defer so it can hold the page until the
  * strings are in place. The JSON is fetched, so serve the site over HTTP.
  */
@@ -31,9 +31,7 @@
       return param;
     }
     const stored = readStored();
-    if (SUPPORTED.includes(stored)) return stored;
-    const preferred = (navigator.languages || [navigator.language || '']).map((code) => code.slice(0, 2).toLowerCase());
-    return preferred.find((code) => SUPPORTED.includes(code)) || FALLBACK;
+    return SUPPORTED.includes(stored) ? stored : FALLBACK;
   };
 
   const lang = pickLanguage();

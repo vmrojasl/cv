@@ -342,8 +342,8 @@
     "voices": {
       "title": "Third-party voice",
       "folio": "07 · Third-party voice",
-      "blockquote": "“Tuve la fortuna de trabajar hombro a hombro con él y su equipo para llevar nuestra empresa y nuestra propiedad intelectual al siguiente nivel.”",
-      "quote-translation": "“I was fortunate to work shoulder to shoulder with him and his team to take our company and our intellectual property to the next level.” <small>Translated from Spanish</small>",
+      "blockquote": "“I was fortunate to work shoulder to shoulder with him and his team to take our company and our intellectual property to the next level.”",
+      "quote-translation": "<small>Translated from Spanish</small>",
       "strong": "Cristian Camilo Díaz Merchán",
       "span": "General Manager, KI Natural Science",
       "span_2": "External validation",
@@ -459,7 +459,7 @@
       "section-mark": "Evidence",
       "h2": "External validation from Connect Bogota",
       "p": "Connect Bogota lists the case under its research-results transfer services, connecting the program Sacale Jugo a Tu Patente, Ki Cannabic Science, RIPPLE and the spin-off TORCH.",
-      "span": "Sacale Jugo a Tu Patente",
+      "span": "Minciencias and SIC program",
       "strong": "De la invencion a la innovacion",
       "h3": "Sacale Jugo a Tu Patente",
       "case-tag": "Public evidence",
@@ -470,11 +470,11 @@
       "section-mark": "LinkedIn",
       "h2": "Client recommendation from the accompaniment",
       "p": "Recommendation published by Cristian Camilo Diaz Merchan, General Manager at KI Natural Science, after working with Victor and his team.",
-      "blockquote": "Victor es un profesional y ser humano de cualidades muy poco comunes. Tuve la fortuna de trabajar hombro a hombro con el y su equipo para llevar nuestra empresa y nuestra propiedad intelectual al siguiente nivel. Resalto en el, su profesionalismo, capacidad de cohesion dentro del equipo y liderazgo en el campo profesional y como ser humano, su calidez y buena vibra. Es un privilegio tenerlo como aliado.",
+      "blockquote": "Victor is a professional and a human being of very uncommon qualities. I was fortunate to work shoulder to shoulder with him and his team to take our company and our intellectual property to the next level. I highlight his professionalism, his ability to build cohesion within the team and his leadership in the professional field and, as a human being, his warmth and good energy. It is a privilege to have him as an ally.",
       "alt": "Cristian Camilo Diaz Merchan",
       "strong": "Cristian Camilo Diaz Merchan",
       "p_2": "General Manager at KI Natural Science",
-      "span": "May 8, 2021",
+      "span": "May 8, 2021 · Translated from Spanish",
       "a": "View LinkedIn recommendations"
     },
     "outcome": {
