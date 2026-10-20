@@ -183,6 +183,7 @@
       "li_3": "<b>USD 10M</b> transferencia industrial",
       "links": {
         "label": "Enlaces del perfil",
+        "academy": "Academy",
         "tools": "Herramientas gratuitas",
         "blog": "Blog"
       }
@@ -191,12 +192,7 @@
       "title": "Tesis ejecutiva",
       "folio": "02 · Tesis ejecutiva",
       "p": "Los emprendimientos científicos fracasan cuando <span class=\"term\">investigación</span>, <span class=\"term\">mercado</span>, <span class=\"term\">PI</span>, <span class=\"term\">finanzas</span> y <span class=\"term\">ejecución</span> avanzan como lenguajes desconectados.",
-      "h2": "Mi trabajo es traducirlos en una sola <em>narrativa operativa con grado de inversión.</em>",
-      "span": "Antes",
-      "h3": "Ciencia prometedora, camino al mercado incierto",
-      "p_2": "Resultados de investigación, patentes y prototipos con poca estructura comercial, valoración o narrativa para inversionistas.",
-      "span_2": "Después",
-      "h3_2": "Lógica de negocio invertible",
+      "h2": "Los traduzco en una sola <em>narrativa con grado de inversión.</em>",
       "label": "Modelo de transferencia",
       "label_2": "Modelo anterior",
       "label_3": "Modelo siguiente",
@@ -440,6 +436,21 @@
       "span": "Por qué importa",
       "blockquote": "El caso demuestra la tesis central del perfil: la ciencia profunda crea más valor empresarial cuando sus historias de tecnología, mercado, comunidad, sostenibilidad y capital avanzan como una sola narrativa operativa.",
       "cite": "Basado en el posicionamiento público de Ki Natural Science y el resumen del caso del portafolio."
+    }
+  },
+  "academy": {
+    "meta": {
+      "title": "Academy en construcción | Victor Rojas"
+    },
+    "header": {
+      "label": "Victor Rojas, volver al perfil",
+      "strong": "Victor Rojas"
+    },
+    "page": {
+      "status": "<i aria-hidden=\"true\"></i>Academy",
+      "rise": "En <em>construcción</em>",
+      "lead": "Estoy preparando cursos y programas de formación en transferencia de tecnología, creación de emprendimientos y comercialización de la ciencia. Muy pronto estarán disponibles aquí.",
+      "button": "Volver al perfil"
     }
   }
 }

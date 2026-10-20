@@ -230,6 +230,7 @@
       "li_3": "<b>USD 10M</b> industrial transfer",
       "links": {
         "label": "Profile links",
+        "academy": "Academy",
         "tools": "Free tools",
         "blog": "Blog"
       }
@@ -238,12 +239,7 @@
       "title": "Executive thesis",
       "folio": "02 · Executive thesis",
       "p": "Science ventures fail when <span class=\"term\">research</span>, <span class=\"term\">market</span>, <span class=\"term\">IP</span>, <span class=\"term\">finance</span> and <span class=\"term\">execution</span> move as disconnected languages.",
-      "h2": "My work is to translate them into one <em>investment-grade operating narrative.</em>",
-      "span": "Before",
-      "h3": "Promising science, unclear market path",
-      "p_2": "Research outputs, patents and prototypes with limited commercial structure, valuation or investor narrative.",
-      "span_2": "After",
-      "h3_2": "Investable venture logic",
+      "h2": "I translate them into one <em><span class=\"nobr\">investment-grade</span> narrative.</em>",
       "label": "Transfer model",
       "label_2": "Previous model",
       "label_3": "Next model",
@@ -487,6 +483,21 @@
       "span": "Why it matters",
       "blockquote": "The case demonstrates the profile's core thesis: deep science creates more enterprise value when its technology, market, community, sustainability and capital stories move as one operating narrative.",
       "cite": "Based on public Ki Natural Science positioning and the portfolio case summary."
+    }
+  },
+  "academy": {
+    "meta": {
+      "title": "Academy under construction | Victor Rojas"
+    },
+    "header": {
+      "label": "Victor Rojas, back to profile",
+      "strong": "Victor Rojas"
+    },
+    "page": {
+      "status": "<i aria-hidden=\"true\"></i>Academy",
+      "rise": "Under <em>construction</em>",
+      "lead": "Courses and learning programs on technology transfer, venture building and science commercialization are being prepared. They will be available here soon.",
+      "button": "Back to profile"
     }
   }
 }

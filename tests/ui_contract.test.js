@@ -56,7 +56,7 @@ test('every page string exists in both languages', () => {
   assert.deepEqual([...esKeys].sort(), [...enKeys].sort());
 
   const has = (dict, key) => typeof key.split('.').reduce((node, part) => node?.[part], dict) === 'string';
-  const pages = ['index.html', 'portfolio.html', 'stories/natural_science_case.html'];
+  const pages = ['index.html', 'portfolio.html', 'academy.html', 'stories/natural_science_case.html'];
   pages.forEach((page) => {
     const source = fs.readFileSync(path.join(root, page), 'utf8');
     const keys = [

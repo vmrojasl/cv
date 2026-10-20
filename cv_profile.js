@@ -242,7 +242,12 @@ const bootProfile = () => {
   if (modeTicks) narrativeCycle.forEach(() => modeTicks.appendChild(document.createElement('i')));
   const syncModeControl = (mode) => {
     const index = narrativeCycle.indexOf(mode);
-    if (modeName) modeName.textContent = modelText(mode, 'name');
+    if (modeName && modeName.textContent !== modelText(mode, 'name')) {
+      modeName.textContent = modelText(mode, 'name');
+      if (!reducedMotion && modeName.animate) {
+        modeName.animate([{ opacity: 0, transform: 'translateY(8px)' }, { opacity: 1, transform: 'none' }], { duration: 450, easing: 'cubic-bezier(.16,1,.3,1)' });
+      }
+    }
     if (modeCount) modeCount.textContent = `${pad2(index + 1)} / ${pad2(narrativeCycle.length)}`;
     [...(modeTicks?.children || [])].forEach((tick, tickIndex) => tick.classList.toggle('is-active', tickIndex === index));
   };
@@ -347,62 +352,33 @@ const bootProfile = () => {
     restartModeCycle();
   }));
 
-  /* ---------- Thesis: the five languages leave the sentence and become one narrative ---------- */
+  /* ---------- Thesis: the five scattered languages light up as the sentence names them,
+   * then converge into one chain (CSS moves them; this only sets the beats) ---------- */
   let thesisPlayed = false;
   const playThesis = (screen) => {
     if (thesisPlayed) return;
     thesisPlayed = true;
     const terms = [...screen.querySelectorAll('.term')];
     const box = screen.querySelector('.transformation');
-    const chain = [...screen.querySelectorAll('.narrative-chain li')];
-    const arrow = screen.querySelector('.transformation-arrow');
-    const stage = screen.querySelector('.screen-inner');
+    const words = [...screen.querySelectorAll('.narrative-chain li')];
     if (!box) return;
-    if (reducedMotion || !arrow || !stage || !box.animate || terms.length !== chain.length) {
-      terms.forEach((term) => term.classList.add('is-lit'));
-      box.classList.add('is-translated', 'is-chained');
+    const light = (index) => {
+      terms[index]?.classList.add('is-lit');
+      words[index]?.classList.add('is-lit');
+    };
+    if (reducedMotion) {
+      terms.forEach((term, index) => light(index));
+      box.classList.add('is-chained');
       restartModeCycle();
       return;
     }
-    const lightAt = 500;
-    terms.forEach((term, index) => window.setTimeout(() => term.classList.add('is-lit'), lightAt + index * 170));
+    const lightAt = 600;
+    const beat = 260;
+    terms.forEach((term, index) => window.setTimeout(() => light(index), lightAt + index * beat));
     window.setTimeout(() => {
-      const base = stage.getBoundingClientRect();
-      const gate = arrow.getBoundingClientRect();
-      const mid = { x: gate.left + gate.width / 2 - base.left, y: gate.top + gate.height / 2 - base.top };
-      box.classList.add('is-translated');
-      terms.forEach((term, index) => {
-        const from = term.getBoundingClientRect();
-        const to = chain[index].getBoundingClientRect();
-        const fly = document.createElement('span');
-        fly.className = 'term-flyer';
-        fly.setAttribute('aria-hidden', 'true');
-        fly.textContent = term.textContent;
-        fly.style.font = getComputedStyle(term).font;
-        const x0 = from.left - base.left;
-        const y0 = from.top - base.top;
-        fly.style.transform = `translate(${x0}px, ${y0}px)`;
-        stage.appendChild(fly);
-        const cx = (x) => x - from.width / 2;
-        const cy = (y) => y - from.height / 2;
-        const midX = cx(mid.x);
-        const midY = cy(mid.y);
-        const endX = cx(to.left - base.left + to.width / 2);
-        const endY = cy(to.top - base.top + to.height / 2);
-        fly.animate([
-          { transform: `translate(${x0}px, ${y0}px) scale(1)`, opacity: 1 },
-          { transform: `translate(${x0}px, ${y0 - 18}px) scale(1.08)`, opacity: 1, offset: 0.12 },
-          { transform: `translate(${midX}px, ${midY}px) scale(.62)`, opacity: 0.95, offset: 0.55 },
-          { transform: `translate(${endX}px, ${endY}px) scale(.82)`, opacity: 1, offset: 0.88 },
-          { transform: `translate(${endX}px, ${endY}px) scale(.82)`, opacity: 0 }
-        ], { duration: 1700, delay: index * 150, easing: 'cubic-bezier(.65,0,.35,1)', fill: 'forwards' })
-          .finished.finally(() => fly.remove());
-      });
-      window.setTimeout(() => {
-        box.classList.add('is-chained');
-        restartModeCycle();
-      }, 1350 + terms.length * 150);
-    }, lightAt + terms.length * 170 + 450);
+      box.classList.add('is-chained');
+      restartModeCycle();
+    }, lightAt + terms.length * beat + 500);
   };
 
   const goToScreen = (index) => {
@@ -486,8 +462,15 @@ const bootProfile = () => {
       getAnchor: (w, h) => {
         // Bogota sits at the centre of the open sky between the copy and the profile.
         if (w < 761) return { x: w * 0.5, y: h - 120, rx: w * 0.42, ry: 80 };
-        if (w <= 1100) return { x: w * 0.76, y: h * 0.24, rx: w * 0.18, ry: h * 0.15 };
         const base = signalCanvas.getBoundingClientRect();
+        if (w <= 1100) {
+          // Tablet: the open sky between the profile links and the proof strip, clear of all copy.
+          const links = document.querySelector('.executive-profile .profile-links');
+          const strip = document.querySelector('.hero-screen .proof-strip');
+          const top = (links ? links.getBoundingClientRect().bottom : base.top + h * 0.7) - base.top;
+          const bottom = (strip ? strip.getBoundingClientRect().top : base.bottom) - base.top;
+          return { x: w * 0.5, y: (top + bottom) / 2, rx: w * 0.36, ry: Math.max(36, (bottom - top) / 2 - 28) };
+        }
         const textRight = (element) => {
           if (!element) return 0;
           const range = document.createRange();
