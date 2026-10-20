@@ -1,0 +1,15 @@
+{
+  "version": "https://jsonfeed.org/version/1.1",
+  "title": "Science, capital and execution",
+  "home_page_url": "https://vmrojasl.github.io/cv/blog/en/",
+  "feed_url": "https://vmrojasl.github.io/cv/blog/en/feed.json",
+  "description": "Notes by Victor Rojas on technology transfer, science spin-offs, valuation and capital for science.",
+  "language": "en",
+  "authors": [
+    {
+      "name": "Victor Manuel Rojas Leal",
+      "url": "https://vmrojasl.github.io/cv/"
+    }
+  ],
+  "items": []
+}
