@@ -209,12 +209,17 @@
       "h2": "La escala no es una promesa.<br><em>Es evidencia.</em>",
       "p": "Un portafolio construido entre iniciativas de innovación, transferencia de tecnología y emprendimiento.",
       "span": "Ver portafolio",
-      "strong": "USD 58M+",
+      "unit": "USD",
+      "strong": "58",
+      "suffix": "M+",
       "span_2": "en portafolio de proyectos gestionados",
-      "b": "Liderazgo de portafolio",
-      "p_2": "Programas transversales que conectan ciencia, mercado, instituciones y capital.",
-      "b_2": "Tracción comercial",
-      "p_3": "<strong data-count>COP 1.500M+</strong> en ventas de servicios de innovación y transferencia de tecnología, 2023–2024."
+      "label": "Evidencia de respaldo",
+      "ev": "COP 1.500M+",
+      "ev_label": "en ventas de servicios de innovación y transferencia de tecnología, 2023–2024",
+      "ev_2": "17",
+      "ev_2_label": "tecnologías en el portafolio de Sácale Jugo a Tu Patente, 2020–2023",
+      "ev_3": "97/100",
+      "ev_3_label": "puntaje de la propuesta de emprendimiento científico ante Minciencias"
     },
     "cases-a": {
       "title": "Caso destacado",

@@ -256,12 +256,17 @@
       "h2": "Scale is not a promise.<br><em>It is evidence.</em>",
       "p": "A portfolio built across innovation, technology transfer and venture initiatives.",
       "span": "View portfolio",
-      "strong": "USD 58M+",
+      "unit": "USD",
+      "strong": "58",
+      "suffix": "M+",
       "span_2": "portfolio of projects managed",
-      "b": "Portfolio leadership",
-      "p_2": "Cross-functional programs connecting science, market, institutions and capital.",
-      "b_2": "Commercial traction",
-      "p_3": "<strong data-count>COP 1,500M+</strong> in innovation and technology transfer sales, 2023–2024."
+      "label": "Supporting evidence",
+      "ev": "COP 1,500M+",
+      "ev_label": "in innovation and technology transfer sales, 2023–2024",
+      "ev_2": "17",
+      "ev_2_label": "technologies in the Sácale Jugo a Tu Patente portfolio, 2020–2023",
+      "ev_3": "97/100",
+      "ev_3_label": "score for the science entrepreneurship proposal to Minciencias"
     },
     "cases-a": {
       "title": "Featured case",

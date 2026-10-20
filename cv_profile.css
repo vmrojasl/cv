@@ -217,13 +217,18 @@ blockquote[data-split] .wi{transition-duration:1.2s;transition-delay:calc(var(--
 
 /* ---------- 03 Impact ---------- */
 .impact-screen{background:#fff}
-.metric-stage{grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);grid-template-rows:1fr auto;align-items:center;gap:32px 6vw}
-.impact-intro h2{margin:0 0 22px;font-size:var(--display-l);line-height:.92}
-.impact-intro h2 em,.hero-metric strong{color:var(--pantone-302c)}
-.impact-intro p{max-width:420px;color:var(--neutral-600);font:18px/1.5 var(--editorial)}
-.hero-metric{container-type:inline-size;min-width:0;text-align:right}
-.hero-metric strong{display:block;font:500 clamp(64px,min(21cqi,30vh),240px)/.8 var(--serif);letter-spacing:-.04em;white-space:nowrap}
-/* Odometer: each digit is a reel that spins up to its value */
+/* One figure owns the screen: 58 set at monumental size with its currency and
+   scale as small marks, then a strip of three verified figures as the proof. */
+.metric-stage{grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);grid-template-rows:1fr auto;align-items:center;gap:clamp(20px,4vh,44px) 5vw}
+.impact-intro h2{margin:0 0 20px;font-size:clamp(34px,min(3.6vw,6.4vh),60px);line-height:.96}
+.impact-intro h2 em,.hero-metric strong,.metric-suffix,.evidence-strip strong{color:var(--pantone-302c)}
+.impact-intro p{max-width:400px;color:var(--neutral-600);font:18px/1.5 var(--editorial)}
+.hero-metric{min-width:0;justify-self:end;text-align:right}
+.metric-figure{display:flex;align-items:flex-start;justify-content:flex-end;gap:clamp(4px,.6vw,10px);margin:0}
+.hero-metric strong{display:block;font:500 clamp(150px,min(24vw,40vh),380px)/1 var(--serif);letter-spacing:-.05em;font-variant-numeric:lining-nums;white-space:nowrap}
+.metric-unit{order:-1;margin-top:1.1em;color:var(--neutral-600);font:800 clamp(16px,1.5vw,24px)/1 var(--sans);letter-spacing:.14em}
+.metric-suffix{margin-top:.18em;font:500 clamp(48px,min(7vw,12vh),120px)/.8 var(--serif);letter-spacing:-.03em}
+.metric-label{display:block;margin-top:clamp(6px,1.4vh,16px);color:var(--satin-deep-black);font:800 clamp(18px,1.6vw,26px)/1.2 var(--sans)}
 .hero-metric strong.is-odometer{line-height:1.08}
 .odo-char,.odo-reel{display:inline-block;height:1.08em;vertical-align:top}
 .odo-reel{overflow:hidden}
@@ -232,16 +237,14 @@ blockquote[data-split] .wi{transition-duration:1.2s;transition-delay:calc(var(--
 .odo-char{transition:opacity .6s ease,transform 1s var(--ease);transition-delay:calc(var(--r,0) * 140ms + 200ms)}
 .js .hero-metric:not(.is-rolling) .odo-reel>span{transform:none!important}
 .js .hero-metric:not(.is-rolling) .odo-char{opacity:0;transform:translateY(30%)}
-.metric-rule{display:block;height:2px;margin:22px 0 0 auto;width:min(100%,520px);background:linear-gradient(90deg,var(--pantone-302c),var(--ballad-blue),var(--olivestone));transform-origin:right;transition:transform 1.8s var(--ease-in-out) .5s}
-.js .hero-metric:not(.is-rolling) .metric-rule{transform:scaleX(0)}
+.metric-unit,.metric-suffix{transition:opacity .8s ease .9s,transform 1s var(--ease) .9s}
+.js .hero-metric:not(.is-rolling) .metric-unit,.js .hero-metric:not(.is-rolling) .metric-suffix{opacity:0;transform:translateY(12px)}
+.evidence-strip{grid-column:1/-1;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px clamp(24px,4vw,64px);margin:0;padding:0;list-style:none}
+.evidence-strip li{display:grid;align-content:start;gap:10px;padding-top:18px;border-top:1px solid var(--line)}
+.evidence-strip strong{font:500 clamp(34px,min(3.4vw,6vh),56px)/1 var(--serif);letter-spacing:-.03em;font-variant-numeric:lining-nums tabular-nums}
+.evidence-strip span{max-width:34ch;color:var(--neutral-600);font:16px/1.45 var(--editorial)}
 .visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .portfolio-cta{gap:10px;margin-top:30px}
-.hero-metric>span{display:block;margin-top:22px;font:800 clamp(18px,1.8vw,28px)/1.2 var(--sans)}
-.metric-notes{grid-column:2;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 40px}
-.metric-note{display:grid;align-content:start;gap:8px;padding-top:20px;border-top:1px solid var(--line)}
-.metric-note strong{color:var(--pantone-302c);font-family:var(--sans);font-weight:800}
-.metric-note b{font-size:14px}
-.metric-note p{margin:0;color:var(--neutral-600);font-family:var(--editorial);line-height:1.5}
 
 /* ---------- 02 Thesis ---------- */
 .thesis-screen{background:var(--satin-deep-black);color:#fff}
@@ -463,11 +466,10 @@ blockquote[data-split] .wi{transition-duration:1.2s;transition-delay:calc(var(--
   .portrait-mount:before{right:-10%}
   .portrait-mount:after{display:none}
   .executive-profile>div:last-child{margin:0;max-width:52ch}
-  .metric-stage{grid-template-rows:auto;gap:40px}
-  .hero-metric{text-align:left}
-  .metric-rule{margin-left:0;transform-origin:left}
-  .hero-metric strong{font-size:clamp(64px,min(21cqi,24vh),200px)}
-  .metric-notes{grid-column:1}
+  .metric-stage{grid-template-rows:auto;gap:36px}
+  .hero-metric{justify-self:start;text-align:left}
+  .metric-figure{justify-content:flex-start}
+  .hero-metric strong{font-size:clamp(130px,min(34vw,28vh),300px)}
   .feature-case-layout,.voices-layout,.contact-layout{gap:48px}
   .thesis-resolve{grid-template-columns:minmax(0,1fr)}
   /* narrower screens may wrap the chain, so its block takes the full measure */
@@ -492,7 +494,8 @@ blockquote[data-split] .wi{transition-duration:1.2s;transition-delay:calc(var(--
   .pipeline small{margin:0}
   .pipeline strong{max-width:none;font-size:22px}
   .pipeline li>div{grid-column:1/-1;margin-top:4px;padding-top:10px}
-  .metric-notes{grid-template-columns:minmax(0,1fr)}
+  .evidence-strip{grid-template-columns:minmax(0,1fr)}
+  .evidence-strip li{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);align-items:baseline;gap:16px}
 }
 
 /* ---------- Phone ---------- */
@@ -534,11 +537,12 @@ blockquote[data-split] .wi{transition-duration:1.2s;transition-delay:calc(var(--
   .impact-intro h2,.feature-copy h2,.contact-copy h2,.operating-heading h2{font-size:clamp(36px,10.5vw,50px);overflow-wrap:normal}
   .duo-header h2{font-size:clamp(30px,8.6vw,40px);overflow-wrap:normal}
   .impact-intro p,.thesis-statement>p,.feature-copy p,.contact-copy p{font-size:16px}
-  .hero-metric strong{font-size:clamp(52px,21cqi,120px)}
+  .hero-metric strong{font-size:clamp(120px,40vw,180px)}
+  .metric-suffix{font-size:clamp(40px,13vw,60px)}
   .screen-inner h1,.screen-inner h2,.screen-inner h3{overflow-wrap:normal}
-  .hero-metric>span{margin-top:18px;font-size:18px}
-  .metric-rule{margin-left:0;transform-origin:left}
-  .metric-note{grid-template-columns:1fr;gap:6px;padding-top:16px}
+  .metric-label{font-size:18px}
+  .evidence-strip li{grid-template-columns:1fr;gap:6px;padding-top:14px}
+  .evidence-strip strong{font-size:40px}
   .narrative-chain{flex-direction:column;align-items:flex-start;row-gap:12px;margin:8px 0 0 -14px;padding:12px 30px 12px 14px}
   .narrative-chain li{font-size:28px}
   .narrative-chain li+li{margin-left:0}
@@ -610,5 +614,5 @@ blockquote[data-split] .wi{transition-duration:1.2s;transition-delay:calc(var(--
   .hero-orbit,.portrait-frame,.case-backdrop,.testimonial-screen:before,.editorial-case,.primary-nav a{transform:none!important;transition:none!important}
   .hero-orbit:after,.next-section svg,.site-loader-mark span{animation:none}
   .js .hero-metric:not(.is-rolling) .odo-char{opacity:1;transform:none}
-  .js .hero-metric:not(.is-rolling) .metric-rule{transform:none}
+  .js .hero-metric:not(.is-rolling) .metric-unit,.js .hero-metric:not(.is-rolling) .metric-suffix{opacity:1;transform:none}
 }
