@@ -232,7 +232,28 @@ const bootProfile = () => {
     }
   };
   const narrativeCycle = Object.keys(narrativeModels);
-  const modelText = (mode, field) => t(`models.${mode}.${field}`);
+  // English names and readings, shown when the locale files cannot be fetched
+  // (for example when the page is opened straight from disk).
+  const modelFallback = {
+    push: { name: 'Technology push', note: 'Science leads: research looks for its market.' },
+    pull: { name: 'Market pull', note: 'Demand leads: the market sets the research agenda.' },
+    coupled: { name: 'Coupling', note: 'Push and pull at once: lab, product development and market iterate through constant feedback loops.' },
+    open: { name: 'Open innovation', note: 'The boundary opens: unused patents are licensed out; external ideas, patents and startups come in.' },
+    helix: { name: 'Triple helix', note: 'The state funds and regulates; university creates knowledge, company produces: value comes from their interaction.' },
+    dynamic: { name: 'Dynamic model', note: 'Success depends on the receiver: its absorptive capacity and innovation culture, not only the technology.' },
+    catchup: { name: 'Catch-up', note: 'Copy proven production first, then assimilate, improve and innovate: the route of Japan and South Korea.' },
+    design: { name: 'Design-driven', note: 'Neither push nor pull: innovation changes what a product means, as the Wii turned gaming into family play.' },
+    malik: { name: 'Communication (Malik)', note: 'University sends, company receives, technology is the message: success means removing the noise between science and business.' },
+    mayer: { name: 'Intermediary (Mayer-Blass)', note: 'Technology cannot leave the lab as it is: a transfer office translates the discovery into an opportunity investors understand.' },
+    gorschek: { name: '7 steps (Gorschek)', note: 'Brings academic software engineering to industry: seven steps from a real company problem to controlled tests in production.' },
+    bozeman: { name: 'Contingent (Bozeman)', note: 'No single metric such as royalties: effectiveness depends on agent, object, recipient, channel and impact on society.' },
+    lean: { name: 'Lean startup', note: 'As in NSF I-Corps: scientists build an MVP and interview hundreds of customers before patenting or producing at scale.' },
+    tas: { name: 'Application selection', note: 'A breakthrough looking for its market: characterize what makes it unique, identify industries it could serve, select the lowest barrier.' },
+    anglo: { name: 'Anglo-Saxon', note: 'Regional model (Rubiralta): intellectual property first, fast spin-off creation and venture capital funding.' },
+    central: { name: 'Central European', note: 'Regional model: applied research institutes, like Fraunhofer in Germany, funded jointly by the state and private contracts.' },
+    nordic: { name: 'Nordic', note: 'Regional model: strong social cohesion and public funds aimed at sustainability and digitalization.' }
+  };
+  const modelText = (mode, field) => t(`models.${mode}.${field}`) || modelFallback[mode]?.[field] || '';
   const modelTags = (mode) => (window.I18n ? window.I18n.get(`models.${mode}.tags`) : null) || {};
   const narrativeNote = document.querySelector('.narrative-note');
   const modeName = document.querySelector('.mode-name');
