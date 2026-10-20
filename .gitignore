@@ -4,3 +4,6 @@
 .cursor/
 .impeccable/hook.cache.json
 .taste-skill/
+
+# Local blog authoring app: sources, drafts and media stay on this machine
+blog-studio/

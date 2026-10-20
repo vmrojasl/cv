@@ -69,3 +69,15 @@ test('every page string exists in both languages', () => {
     });
   });
 });
+
+test('the profile links to the rendered bilingual blog', () => {
+  assert.match(html, /<a href="\.\/blog\/index\.html"><svg aria-hidden="true"><use href="#i-blog"\/>/);
+  const blog = path.join(root, 'blog');
+  ['index.html', 'sitemap.xml', 'assets/blog.css', 'assets/blog.js'].forEach((file) => assert.ok(fs.existsSync(path.join(blog, file)), file));
+  ['es', 'en'].forEach((lang) => {
+    ['index.html', 'feed.xml', 'feed.json', 'search.json', 'archive/index.html'].forEach((file) => assert.ok(fs.existsSync(path.join(blog, lang, file)), `${lang}/${file}`));
+    assert.match(fs.readFileSync(path.join(blog, lang, 'index.html'), 'utf8'), new RegExp(`<html lang="${lang}">`));
+  });
+  // The authoring app and its sources stay out of git.
+  assert.match(fs.readFileSync(path.join(root, '.gitignore'), 'utf8'), /^blog-studio\/$/m);
+});
