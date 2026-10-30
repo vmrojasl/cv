@@ -1,0 +1,427 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-20T08:54:45.487Z",
+  "title": "Design System: Victor Manuel Rojas Leal, Executive Profile",
+  "extensions": {
+    "colorMeta": {
+      "pantone-302c": {
+        "role": "primary",
+        "displayName": "Pantone 302C Navy",
+        "canonical": "#003B5C",
+        "tonalRamp": [
+          "oklch(15% 0.079 241.5)",
+          "oklch(25% 0.079 241.5)",
+          "oklch(35% 0.079 241.5)",
+          "oklch(45% 0.079 241.5)",
+          "oklch(55% 0.079 241.5)",
+          "oklch(70% 0.079 241.5)",
+          "oklch(85% 0.079 241.5)",
+          "oklch(95% 0.079 241.5)"
+        ]
+      },
+      "navy-ink": {
+        "role": "primary",
+        "displayName": "Night Navy",
+        "canonical": "#00263c",
+        "tonalRamp": [
+          "oklch(15% 0.058 239.7)",
+          "oklch(25% 0.058 239.7)",
+          "oklch(35% 0.058 239.7)",
+          "oklch(45% 0.058 239.7)",
+          "oklch(55% 0.058 239.7)",
+          "oklch(70% 0.058 239.7)",
+          "oklch(85% 0.058 239.7)",
+          "oklch(95% 0.058 239.7)"
+        ]
+      },
+      "trail-sand": {
+        "role": "secondary",
+        "displayName": "Trail Sand",
+        "canonical": "#BFA995",
+        "tonalRamp": [
+          "oklch(15% 0.038 64.5)",
+          "oklch(25% 0.038 64.5)",
+          "oklch(35% 0.038 64.5)",
+          "oklch(45% 0.038 64.5)",
+          "oklch(55% 0.038 64.5)",
+          "oklch(70% 0.038 64.5)",
+          "oklch(85% 0.038 64.5)",
+          "oklch(95% 0.038 64.5)"
+        ]
+      },
+      "sand-on-navy": {
+        "role": "secondary",
+        "displayName": "Sand on Navy",
+        "canonical": "#d9c8b8",
+        "tonalRamp": [
+          "oklch(15% 0.029 65.7)",
+          "oklch(25% 0.029 65.7)",
+          "oklch(35% 0.029 65.7)",
+          "oklch(45% 0.029 65.7)",
+          "oklch(55% 0.029 65.7)",
+          "oklch(70% 0.029 65.7)",
+          "oklch(85% 0.029 65.7)",
+          "oklch(95% 0.029 65.7)"
+        ]
+      },
+      "ballad-blue": {
+        "role": "tertiary",
+        "displayName": "Ballad Blue",
+        "canonical": "#BFCDD9",
+        "tonalRamp": [
+          "oklch(15% 0.023 243.9)",
+          "oklch(25% 0.023 243.9)",
+          "oklch(35% 0.023 243.9)",
+          "oklch(45% 0.023 243.9)",
+          "oklch(55% 0.023 243.9)",
+          "oklch(70% 0.023 243.9)",
+          "oklch(85% 0.023 243.9)",
+          "oklch(95% 0.023 243.9)"
+        ]
+      },
+      "olivestone": {
+        "role": "tertiary",
+        "displayName": "Olivestone",
+        "canonical": "#707326",
+        "tonalRamp": [
+          "oklch(15% 0.099 111.4)",
+          "oklch(25% 0.099 111.4)",
+          "oklch(35% 0.099 111.4)",
+          "oklch(45% 0.099 111.4)",
+          "oklch(55% 0.099 111.4)",
+          "oklch(70% 0.099 111.4)",
+          "oklch(85% 0.099 111.4)",
+          "oklch(95% 0.099 111.4)"
+        ]
+      },
+      "satin-deep-black": {
+        "role": "neutral",
+        "displayName": "Satin Deep Black",
+        "canonical": "#1B1E23",
+        "tonalRamp": [
+          "oklch(15% 0.011 260.7)",
+          "oklch(25% 0.011 260.7)",
+          "oklch(35% 0.011 260.7)",
+          "oklch(45% 0.011 260.7)",
+          "oklch(55% 0.011 260.7)",
+          "oklch(70% 0.011 260.7)",
+          "oklch(85% 0.011 260.7)",
+          "oklch(95% 0.011 260.7)"
+        ]
+      },
+      "dark-elf": {
+        "role": "neutral",
+        "displayName": "Dark Elf",
+        "canonical": "#3B3E42",
+        "tonalRamp": [
+          "oklch(15% 0.008 255.5)",
+          "oklch(25% 0.008 255.5)",
+          "oklch(35% 0.008 255.5)",
+          "oklch(45% 0.008 255.5)",
+          "oklch(55% 0.008 255.5)",
+          "oklch(70% 0.008 255.5)",
+          "oklch(85% 0.008 255.5)",
+          "oklch(95% 0.008 255.5)"
+        ]
+      },
+      "neutral-600": {
+        "role": "neutral",
+        "displayName": "Neutral 600",
+        "canonical": "#5E6064",
+        "tonalRamp": [
+          "oklch(15% 0.007 264.5)",
+          "oklch(25% 0.007 264.5)",
+          "oklch(35% 0.007 264.5)",
+          "oklch(45% 0.007 264.5)",
+          "oklch(55% 0.007 264.5)",
+          "oklch(70% 0.007 264.5)",
+          "oklch(85% 0.007 264.5)",
+          "oklch(95% 0.007 264.5)"
+        ]
+      },
+      "neutral-500": {
+        "role": "neutral",
+        "displayName": "Neutral 500",
+        "canonical": "#848588",
+        "tonalRamp": [
+          "oklch(15% 0.005 271.3)",
+          "oklch(25% 0.005 271.3)",
+          "oklch(35% 0.005 271.3)",
+          "oklch(45% 0.005 271.3)",
+          "oklch(55% 0.005 271.3)",
+          "oklch(70% 0.005 271.3)",
+          "oklch(85% 0.005 271.3)",
+          "oklch(95% 0.005 271.3)"
+        ]
+      },
+      "neutral-400": {
+        "role": "neutral",
+        "displayName": "Neutral 400",
+        "canonical": "#ABACAE",
+        "tonalRamp": [
+          "oklch(15% 0.003 264.5)",
+          "oklch(25% 0.003 264.5)",
+          "oklch(35% 0.003 264.5)",
+          "oklch(45% 0.003 264.5)",
+          "oklch(55% 0.003 264.5)",
+          "oklch(70% 0.003 264.5)",
+          "oklch(85% 0.003 264.5)",
+          "oklch(95% 0.003 264.5)"
+        ]
+      },
+      "neutral-300": {
+        "role": "neutral",
+        "displayName": "Neutral 300",
+        "canonical": "#D4D5D6",
+        "tonalRamp": [
+          "oklch(15% 0.002 247.8)",
+          "oklch(25% 0.002 247.8)",
+          "oklch(35% 0.002 247.8)",
+          "oklch(45% 0.002 247.8)",
+          "oklch(55% 0.002 247.8)",
+          "oklch(70% 0.002 247.8)",
+          "oklch(85% 0.002 247.8)",
+          "oklch(95% 0.002 247.8)"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Paper",
+        "canonical": "#f5f6f7",
+        "tonalRamp": [
+          "oklch(15% 0.002 247.8)",
+          "oklch(25% 0.002 247.8)",
+          "oklch(35% 0.002 247.8)",
+          "oklch(45% 0.002 247.8)",
+          "oklch(55% 0.002 247.8)",
+          "oklch(70% 0.002 247.8)",
+          "oklch(85% 0.002 247.8)",
+          "oklch(95% 0.002 247.8)"
+        ]
+      },
+      "white": {
+        "role": "neutral",
+        "displayName": "White",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "oklch(15% 0.000 89.9)",
+          "oklch(25% 0.000 89.9)",
+          "oklch(35% 0.000 89.9)",
+          "oklch(45% 0.000 89.9)",
+          "oklch(55% 0.000 89.9)",
+          "oklch(70% 0.000 89.9)",
+          "oklch(85% 0.000 89.9)",
+          "oklch(95% 0.000 89.9)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Hero h1 only."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section h2s."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Card, dialog and pipeline titles."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Section leads and dialog body (16px on phones)."
+      },
+      "body-card": {
+        "displayName": "Body (cards)",
+        "purpose": "Case cards, method pipeline, validation card."
+      },
+      "interface": {
+        "displayName": "Interface",
+        "purpose": "Buttons and text actions."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Folios, tags, captions, tooltips; uppercase, 12px floor."
+      }
+    },
+    "shadows": [
+      {
+        "name": "card-lift",
+        "value": "0 28px 50px -18px rgba(27,30,35,.35)",
+        "purpose": "Editorial case on hover/focus with an 8px rise; pointer devices only."
+      },
+      {
+        "name": "dialog",
+        "value": "0 40px 100px -20px rgba(0,0,0,.45)",
+        "purpose": "Case dialog over a blurred navy backdrop."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease",
+        "value": "cubic-bezier(.16,1,.3,1)",
+        "purpose": "Default expo-out for reveals, wipes and hovers."
+      },
+      {
+        "name": "ease-in-out",
+        "value": "cubic-bezier(.76,0,.24,1)",
+        "purpose": "Curtains: loader, menu, translation card, pipeline track."
+      },
+      {
+        "name": "reveal",
+        "value": "opacity .9s, transform 1.1s, filter .9s; 32px rise from 8px blur",
+        "purpose": "Default entrance; opacity-only under reduced motion."
+      },
+      {
+        "name": "word-rise",
+        "value": "1s per word; 42ms stagger + 120ms",
+        "purpose": "Masked word rise for display lines."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "phone",
+        "value": "760px"
+      },
+      {
+        "name": "pipeline-vertical",
+        "value": "900px"
+      },
+      {
+        "name": "tablet",
+        "value": "1100px"
+      },
+      {
+        "name": "deck",
+        "value": "min-width 1101px and min-height 700px"
+      },
+      {
+        "name": "short-desktop",
+        "value": "max-height 800px and min-width 1101px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Square navy action with a sand fill that wipes up on hover.",
+      "html": "<a class=\"ds-btn\" href=\"#\">Download the profile</a>",
+      "css": ".ds-btn{position:relative;isolation:isolate;display:inline-flex;align-items:center;min-height:52px;padding:0 24px;overflow:hidden;background:#003B5C;color:#fff;font:800 14px/1.2 Aptos,\"Segoe UI\",Arial,sans-serif;text-decoration:none;transition:color .35s cubic-bezier(.16,1,.3,1)}.ds-btn:before{content:\"\";position:absolute;inset:0;z-index:-1;background:#BFA995;transform:scaleY(0);transform-origin:bottom;transition:transform .45s cubic-bezier(.16,1,.3,1)}.ds-btn:hover{color:#1B1E23}.ds-btn:hover:before{transform:scaleY(1)}.ds-btn:focus-visible{outline:2px solid #707326;outline-offset:4px}"
+    },
+    {
+      "name": "Hero Button",
+      "kind": "button",
+      "refersTo": "button-on-navy",
+      "description": "Sand action on the navy hero; white fill wipes up on hover.",
+      "html": "<div style=\"background:#003B5C;padding:24px\"><a class=\"ds-btn-hero\" href=\"#\">Contact</a></div>",
+      "css": ".ds-btn-hero{position:relative;isolation:isolate;display:inline-flex;align-items:center;min-height:52px;padding:0 24px;overflow:hidden;background:#BFA995;color:#1B1E23;font:800 14px/1.2 Aptos,\"Segoe UI\",Arial,sans-serif;text-decoration:none}.ds-btn-hero:before{content:\"\";position:absolute;inset:0;z-index:-1;background:#fff;transform:scaleY(0);transform-origin:bottom;transition:transform .45s cubic-bezier(.16,1,.3,1)}.ds-btn-hero:hover:before{transform:scaleY(1)}.ds-btn-hero:focus-visible{outline:2px solid #BFA995;outline-offset:4px}"
+    },
+    {
+      "name": "Text Action",
+      "kind": "button",
+      "refersTo": "text-action",
+      "description": "Inline link whose underline grows from the left on hover.",
+      "html": "<a class=\"ds-text-action\" href=\"#\">View portfolio <svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M7 17 17 7M8 7h9v9\"/></svg></a>",
+      "css": ".ds-text-action{display:inline-flex;align-items:center;gap:6px;min-height:44px;color:#003B5C;font:800 14px/1.2 Aptos,\"Segoe UI\",Arial,sans-serif;text-decoration:none;background:linear-gradient(currentColor,currentColor) left bottom/0 1px no-repeat;transition:background-size .4s cubic-bezier(.16,1,.3,1)}.ds-text-action:hover{background-size:100% 1px}.ds-text-action svg{transition:transform .25s cubic-bezier(.16,1,.3,1)}.ds-text-action:hover svg{transform:translate(3px,-3px)}.ds-text-action:focus-visible{outline:2px solid #707326;outline-offset:4px}"
+    },
+    {
+      "name": "Case Tag",
+      "kind": "chip",
+      "refersTo": "case-tag",
+      "description": "Outlined uppercase tag on navy.",
+      "html": "<div style=\"background:#003B5C;padding:24px\"><span class=\"ds-tag\">Spin-off</span></div>",
+      "css": ".ds-tag{display:inline-block;padding:8px 11px;border:1px solid rgba(217,200,184,.5);color:#d9c8b8;font:800 12px/1 Aptos,\"Segoe UI\",Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase}"
+    },
+    {
+      "name": "Editorial Case",
+      "kind": "card",
+      "refersTo": "editorial-case",
+      "description": "Square case card with ghost serif index, label row, title and 16px body; lifts on hover.",
+      "html": "<article class=\"ds-case\"><b>01</b><span>Science venture</span><h3>From lab result to licensed product</h3><p>Sixteen-pixel Palatino body copy describes the case in two or three lines.</p></article>",
+      "css": ".ds-case{position:relative;display:flex;flex-direction:column;gap:12px;max-width:320px;padding:32px 28px;background:#fff;border-left:1px solid rgba(27,30,35,.16);color:#1B1E23;transition:transform .5s cubic-bezier(.16,1,.3,1),box-shadow .5s cubic-bezier(.16,1,.3,1)}.ds-case:hover,.ds-case:focus-within{transform:translateY(-8px);box-shadow:0 28px 50px -18px rgba(27,30,35,.35)}.ds-case>b{position:absolute;top:20px;right:24px;color:rgba(0,59,92,.12);font:500 72px/.8 \"Georgia Pro\",Georgia,serif;letter-spacing:-.04em}.ds-case span{padding:0 52px 14px 0;border-bottom:1px solid rgba(127,127,127,.35);font:800 12px/1 Aptos,\"Segoe UI\",Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase}.ds-case h3{margin:0;max-width:12ch;font:500 30px/.98 \"Georgia Pro\",Georgia,serif;letter-spacing:-.03em}.ds-case p{margin:0;color:#5E6064;font:16px/1.5 \"Palatino Linotype\",\"Book Antiqua\",Palatino,serif}"
+    },
+    {
+      "name": "Folio",
+      "kind": "custom",
+      "refersTo": "label",
+      "description": "Numbered uppercase section folio with hairline lead-in; identity element.",
+      "html": "<p class=\"ds-folio\">03 · Impact</p>",
+      "css": ".ds-folio{display:flex;align-items:center;gap:14px;margin:0;color:#5E6064;font:800 12px/1.4 Aptos,\"Segoe UI\",Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase}.ds-folio:before{content:\"\";width:28px;height:1px;background:currentColor}"
+    },
+    {
+      "name": "Section Navigator",
+      "kind": "nav",
+      "refersTo": "section-navigator",
+      "description": "Right-edge dots; current is sand (Satin Deep Black on the sand screen). Desktop deck mode only.",
+      "html": "<nav class=\"ds-dots\"><button aria-label=\"01\"></button><button aria-current=\"true\" aria-label=\"02\"></button><button aria-label=\"03\"></button></nav>",
+      "css": ".ds-dots{display:grid;gap:7px;width:22px}.ds-dots button{position:relative;width:22px;height:22px;padding:0;border:0;background:transparent;color:#848588;cursor:pointer}.ds-dots button:before{content:\"\";position:absolute;inset:8px;border:1px solid currentColor;border-radius:50%;transition:inset .3s cubic-bezier(.16,1,.3,1)}.ds-dots button:hover:before,.ds-dots button:focus-visible:before{inset:6px;border-color:#003B5C}.ds-dots button[aria-current=true]:before{inset:4px;background:#BFA995;border-color:#BFA995}"
+    },
+    {
+      "name": "Language Switch",
+      "kind": "nav",
+      "refersTo": "site-header",
+      "description": "EN/ES segmented switch in the navy header.",
+      "html": "<div style=\"background:#003B5C;padding:16px\"><div class=\"ds-lang\"><button aria-pressed=\"true\">EN</button><button aria-pressed=\"false\">ES</button></div></div>",
+      "css": ".ds-lang{display:inline-flex;border:1px solid rgba(255,255,255,.36)}.ds-lang button{min-width:42px;min-height:42px;padding:0 10px;border:0;background:transparent;color:#fff;font:800 12px/1 Aptos,\"Segoe UI\",Arial,sans-serif;letter-spacing:.12em;cursor:pointer}.ds-lang button+button{border-left:1px solid rgba(255,255,255,.36)}.ds-lang button[aria-pressed=true]{background:#fff;color:#003B5C}.ds-lang button:not([aria-pressed=true]):hover{background:rgba(255,255,255,.12)}.ds-lang button:focus-visible{outline:2px solid #BFA995;outline-offset:2px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Charted Dossier",
+    "overview": "An executive dossier read as a night chart. The story opens in a navy sky centred on Bogotá, where constellations draw out to the ecosystems the work reaches, then turns into eight numbered screens that alternate dark, light and one sand screen at the close. Serif display type carries the authority; Palatino carries the argument; a heavy small-caps-style sans carries the instruments (folios, labels, counters).\n\nDensity is low and deliberate: one idea per full-viewport screen, hairline rules instead of boxes, square-cornered surfaces, and circles reserved for celestial and navigational geometry (orbits, portrait arch, dots, round controls). Motion is cinematic but purposeful: masked word rises, soft-focus reveals, wipes on curtains and cards, all collapsing under reduced motion.\n\nThe system is shared by the profile (index.html), the holding pages (academy.html, portfolio.html) and the case story (stories/), each of which re-declares the same root tokens.",
+    "keyCharacteristics": [
+      "Eight full-screen story sections, numbered 01 to 08, each with an uppercase letter-spaced folio and a hairline lead-in.",
+      "Tone per screen (`data-tone` dark / light / accent) drives folio, navigator and Next colours.",
+      "Navy radial cosmos hero with a live constellation canvas anchored on Bogotá.",
+      "Square surfaces, 1px hairlines, circles only for orbits, dots and round controls.",
+      "Italic sand emphasis inside serif headlines.",
+      "Bilingual EN/ES; all copy comes from locales/*.json, so layouts must tolerate Spanish expansion."
+    ],
+    "rules": [
+      {
+        "name": "The Tone Contract Rule",
+        "body": "Every screen declares a tone; folio, navigator dots and Next button take their colour from it (dark: sand-on-navy; light: neutral-600 / navy; accent: satin-deep-black). On the sand screen the current navigator dot is Satin Deep Black, never sand on sand.",
+        "section": "colors"
+      },
+      {
+        "name": "The Sand Is Scarce Rule",
+        "body": "Trail Sand marks one thing per view: the emphasis, the current position or the primary action. The contact screen is the only sand ground.",
+        "section": "colors"
+      },
+      {
+        "name": "The 12px Floor Rule",
+        "body": "No label, folio, tag, caption or tooltip is set below 12px. Card and pipeline body copy is 16px.",
+        "section": "typography"
+      },
+      {
+        "name": "The Italic Sand Rule",
+        "body": "Emphasis inside a serif headline is an `em` in italic; on dark grounds it is Trail Sand, on white it is Navy. It is an identity element, not a stylistic accident.",
+        "section": "typography"
+      },
+      {
+        "name": "The Lift-On-Intent Rule",
+        "body": "Surfaces rest flat; a shadow appears only with hover, focus or a modal layer.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do keep every small uppercase label, folio, tag and tooltip at 12px or larger, and card / pipeline body at 16px.",
+      "Do declare a tone on every new screen so folio, dots and Next inherit the right colour; use Satin Deep Black for the current dot on the sand screen.",
+      "Do hide the section dot navigator below 1100px, show Next only on the hero there, and keep 150px clear on the right of the hero proof strip.",
+      "Do keep the tablet constellation anchor in the open sky between the profile links and the proof strip, never over copy.",
+      "Do keep the identity elements: uppercase letter-spaced folios and labels, 01 to 08 numbering, hairline rules, the navy radial cosmos gradient, a single portrait image, italic sand emphasis in headlines.",
+      "Do keep square corners on text-bearing surfaces and reserve circles for orbits, dots, nodes and round controls.",
+      "Do provide a reduced-motion path for every reveal, wipe and parallax.",
+      "Do test fit with Spanish copy and on a non-Windows device before shipping layout changes."
+    ],
+    "donts": [
+      "Don't \"fix\" the identity elements above into generic patterns (no removing folios or numbering, no swapping hairlines for boxed cards, no replacing the cosmos with a flat or photographic hero, no adding more portraits).",
+      "Don't put sand text or sand dots on the sand screen.",
+      "Don't let the Next button, dot navigator or constellation overlap copy at any width.",
+      "Don't add rounded-rectangle cards or pills; the system has no intermediate radius.",
+      "Don't add shadows to resting surfaces."
+    ]
+  }
+}

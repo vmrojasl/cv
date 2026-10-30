@@ -1,0 +1,13 @@
+# Local agent and tool settings
+.claude/
+.codex/
+.cursor/
+.impeccable/hook.cache.json
+.taste-skill/
+
+# Local blog authoring app: sources, drafts and media stay on this machine
+blog-studio/
+
+# Source documents (tender bases, internal files): never published
+*.doc
+*.docx

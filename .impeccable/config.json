@@ -1,0 +1,80 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "italic-serif-display",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-04T22:08:46.312Z",
+        "reason": "Claude: incumbent brand identity; original cv_profile.css set italic Georgia em inside h1/h2; refinement preserves it"
+      },
+      {
+        "rule": "italic-serif-display",
+        "value": "*",
+        "files": [
+          "stories/natural_science_case.html"
+        ],
+        "createdAt": "2026-10-04T22:08:46.543Z",
+        "reason": "Claude: same incumbent VR editorial italic accent carried to the case page for consistency"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-04T22:08:46.699Z",
+        "reason": "Claude: full-bleed screens and rule-topped lists with padded children; rendered screenshots show generous inset"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "stories/natural_science_case.html"
+        ],
+        "createdAt": "2026-10-04T22:08:46.837Z",
+        "reason": "Claude: evidence visual and lists have 24-40px padding in rendered screenshots; detector misreads pseudo-element/rules"
+      },
+      {
+        "rule": "clipped-overflow-container",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-04T22:08:46.974Z",
+        "reason": "Claude: incumbent architecture; body overflow hidden because .story-shell is the scroll container"
+      },
+      {
+        "rule": "all-caps-body",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-04T22:08:47.151Z",
+        "reason": "Claude: uppercase only on short running-head labels (folio), not body copy"
+      },
+      {
+        "rule": "all-caps-body",
+        "value": "*",
+        "files": [
+          "stories/natural_science_case.html"
+        ],
+        "createdAt": "2026-10-04T22:08:47.298Z",
+        "reason": "Claude: uppercase only on the hero running-head label line, not body copy"
+      },
+      {
+        "rule": "marquee",
+        "value": "*",
+        "files": [
+          "portfolio.html"
+        ],
+        "createdAt": "2026-10-04T22:28:41.195Z",
+        "reason": "Claude: no scrolling content; the looping translateX is an indeterminate progress bar (literal 'under construction' signal, 64px, no text), disabled under prefers-reduced-motion"
+      }
+    ]
+  }
+}

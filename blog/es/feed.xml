@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ciencia, capital y ejecución</title>
+    <link>https://vmrojasl.github.io/cv/blog/es/</link>
+    <atom:link href="https://vmrojasl.github.io/cv/blog/es/feed.xml" rel="self" type="application/rss+xml"/>
+    <description>Notas de Victor Rojas sobre transferencia de tecnología, spin-offs científicas, valoración y capital para la ciencia.</description>
+    <language>es-CO</language>
+    
+
+  </channel>
+</rss>
