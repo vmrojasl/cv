@@ -11,5 +11,19 @@
       "url": "https://vmrojasl.github.io/cv/"
     }
   ],
-  "items": []
+  "items": [
+    {
+      "id": "https://vmrojasl.github.io/cv/blog/es/why-i-write/",
+      "url": "https://vmrojasl.github.io/cv/blog/es/why-i-write/",
+      "title": "Por qué escribo sobre ciencia, capital y ejecución",
+      "summary": "Un cuaderno de trabajo para traducir entre los idiomas que separan a la investigación de las empresas, los acuerdos y la inversión.",
+      "content_html": "<p>Durante los últimos años he trabajado donde se cruzan la investigación, la propiedad intelectual, el mercado, las finanzas y la ejecución. En ese cruce he visto el mismo patrón una y otra vez: la ciencia es buena, pero no llega a convertirse en una empresa, una licencia o una inversión porque cada actor habla un idioma distinto.</p>\n<p>Este blog es mi cuaderno de trabajo para traducir entre esos idiomas.</p>\n<h2 id=\"que-vas-a-encontrar-aqui\"><a class=\"anchor\" href=\"#que-vas-a-encontrar-aqui\" aria-hidden=\"true\" tabindex=\"-1\">#</a>Qué vas a encontrar aquí</h2>\n<ul>\n<li><strong>Transferencia de tecnología:</strong> cómo se estructura un acuerdo, qué negocia cada parte y dónde suele romperse.</li>\n<li><strong>Spin-offs científicas:</strong> gobernanza, valoración y preparación para el capital.</li>\n<li><strong>Valoración de tecnologías:</strong> rangos, supuestos y anclas de negociación.</li>\n<li><strong>Ecosistemas:</strong> universidades, empresas, inversionistas e instituciones públicas avanzando en la misma dirección.</li>\n</ul>\n<h2 id=\"como-escribo\"><a class=\"anchor\" href=\"#como-escribo\" aria-hidden=\"true\" tabindex=\"-1\">#</a>Cómo escribo</h2>\n<p>Escribo a partir de casos reales, sin revelar información confidencial. Cada artículo intentará dejar algo utilizable: un marco, una lista de verificación o una pregunta para la próxima reunión de junta.</p>\n<aside class=\"callout callout-key\" role=\"note\"><p class=\"callout-title\">Clave</p><p>La complejidad solo se vuelve valiosa cuando puede traducirse en una decisión, un acuerdo y un camino para escalar.</p>\n</aside>\n<p>Si quieres proponer un tema o discutir un caso, escríbeme a <a href=\"mailto:vmrlbiz@gmail.com\">vmrlbiz@gmail.com</a> o en <a href=\"https://www.linkedin.com/in/ingvmrl\" target=\"_blank\" rel=\"noopener noreferrer\">LinkedIn</a>.</p>\n",
+      "date_published": "2026-10-20T12:00:00Z",
+      "tags": [
+        "Transferencia de tecnología",
+        "Spin-offs"
+      ],
+      "language": "es"
+    }
+  ]
 }

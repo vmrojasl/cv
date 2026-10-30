@@ -6,7 +6,29 @@
     <atom:link href="https://vmrojasl.github.io/cv/blog/en/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Notes by Victor Rojas on technology transfer, science spin-offs, valuation and capital for science.</description>
     <language>en-US</language>
-    
-
+    <lastBuildDate>Tue, 20 Oct 2026 12:00:00 GMT</lastBuildDate>
+    <item>
+      <title>Why I write about science, capital and execution</title>
+      <link>https://vmrojasl.github.io/cv/blog/en/why-i-write/</link>
+      <guid isPermaLink="true">https://vmrojasl.github.io/cv/blog/en/why-i-write/</guid>
+      <pubDate>Tue, 20 Oct 2026 12:00:00 GMT</pubDate>
+      <description>A working notebook for translating between the languages that keep research apart from companies, deals and investment.</description>
+      <category>Technology transfer</category><category>Spin-offs</category>
+      <content:encoded><![CDATA[<p>For the last few years I have worked where research, intellectual property, market, finance and execution meet. At that junction I have seen the same pattern again and again: the science is good, but it never becomes a company, a licence or an investment, because every party speaks a different language.</p>
+<p>This blog is my working notebook for translating between those languages.</p>
+<h2 id="what-you-will-find-here"><a class="anchor" href="#what-you-will-find-here" aria-hidden="true" tabindex="-1">#</a>What you will find here</h2>
+<ul>
+<li><strong>Technology transfer:</strong> how a deal is structured, what each side negotiates and where it usually breaks.</li>
+<li><strong>Science spin-offs:</strong> governance, valuation and capital readiness.</li>
+<li><strong>Technology valuation:</strong> ranges, assumptions and negotiation anchors.</li>
+<li><strong>Ecosystems:</strong> universities, companies, investors and public institutions moving in the same direction.</li>
+</ul>
+<h2 id="how-i-write"><a class="anchor" href="#how-i-write" aria-hidden="true" tabindex="-1">#</a>How I write</h2>
+<p>I write from real cases, without disclosing confidential information. Every article will try to leave you something usable: a framework, a checklist or a question for your next board meeting.</p>
+<aside class="callout callout-key" role="note"><p class="callout-title">Key point</p><p>Complexity becomes valuable only when it can be translated into a decision, a deal and a path to scale.</p>
+</aside>
+<p>If you want to suggest a topic or discuss a case, write to me at <a href="mailto:vmrlbiz@gmail.com">vmrlbiz@gmail.com</a> or on <a href="https://www.linkedin.com/in/ingvmrl" target="_blank" rel="noopener noreferrer">LinkedIn</a>.</p>
+]]></content:encoded>
+    </item>
   </channel>
 </rss>
